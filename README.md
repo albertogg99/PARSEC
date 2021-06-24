@@ -48,3 +48,8 @@ $ parsecmgmt -a run
 
 *Nota: por motivos de espacio este repositorio solo incluye los inputs de prueba. Para descargar los inputs realistas (native), visita https://parsec.cs.princeton.edu/parsec3-doc.htm*.
 
+## Personas que han contribuido
+
+Alberto García García
+
+José Daniel García Sánchez (tutor)
