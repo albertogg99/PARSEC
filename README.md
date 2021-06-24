@@ -22,12 +22,29 @@ A continuación se explica brevemente cómo instalar y ejecutar las aplicaciones
 #### Cómo instalar  y ejecutar el *benchmark*
 **1.**  Descarga el zip con los archivos.
 
+![image](https://user-images.githubusercontent.com/50078845/123200846-d3a46b80-d4b1-11eb-9692-1794f1e5e36f.png)
+
 **2.**  Extrae los archivos en un directorio.
 
 **3.**  Navega al directorio donde se han extraído los archivos.
 
 **4.**  Ejecuta el comando **source env.sh** en la terminal para activar el entorno.
 
+```
+$ source env.sh
+```
+
 **5.**  Ejecuta el comando **parsecmgmt -a build** para construir las aplicaciones del benchmark.
 
-**6.**  Ejecuta el comando **parsecmgmt -a run -i native** para ejecutar las aplicaciones del benchmark con el input nativo.
+```
+$ parsecmgmt -a build
+```
+
+**6.**  Ejecuta el comando **parsecmgmt -a run** para ejecutar las aplicaciones del benchmark con el input nativo.
+
+```
+$ parsecmgmt -a run
+```
+
+*Nota: por motivos de espacio este repositorio solo incluye los inputs de prueba. Para descargar los inputs realistas (native), visita https://parsec.cs.princeton.edu/parsec3-doc.htm*.
+
