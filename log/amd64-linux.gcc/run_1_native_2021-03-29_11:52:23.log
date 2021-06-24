@@ -1,0 +1,108 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on lun 29 mar 2021 11:52:23 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 128 1000000 200000 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 10 20 128 1000000 200000 5000 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+
+=====================================[Server] 1 clients are connected
+=======================
+  Enter PARSEC TCPIP ROI 
+============================================================
+read 200000 points
+[0] Data size = 102400000B, time =  0.298638s, BW =  342.890MB/s
+[0] Data size = 102400000B, time =  0.280126s, BW =  365.550MB/s
+[0] Data size = 102400000B, time =  0.178832s, BW =  572.604MB/s
+[0] Data size = 102400000B, time =  0.179667s, BW =  569.943MB/s
+[0] Data size = 102400000B, time =  0.200395s, BW =  510.991MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   1.14s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.664s               58.18
+         Tx_Link              0.067s                5.86
+         Rx_Link              0.086s                7.54
+           Timer              0.003s                0.26
+          Socket              0.337s               29.56
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+
+=================================================================
+==27297==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7fd44e0479d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x55b4d3b28bdf in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7fd44e0479d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x55b4d3b28311 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+SUMMARY: LeakSanitizer: 120 byte(s) leaked in 5 allocation(s).
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+=================================================================
+==27298==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 5120000 byte(s) in 1 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6b4cb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2157
+
+Direct leak of 160000 byte(s) in 1 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6b4df in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2166
+
+Direct leak of 120 byte(s) in 1 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6affd in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2122
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6e23f in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6d971 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+Indirect leak of 512000000 byte(s) in 5 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6b069 in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2128
+
+Indirect leak of 32000000 byte(s) in 5 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6b089 in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2143
+
+Indirect leak of 2560000 byte(s) in 1 object(s) allocated from:
+    #0 0x7fe8f8b149d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x562112e6b4bb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2156
+
+SUMMARY: LeakSanitizer: 551840240 byte(s) leaked in 19 allocation(s).
+
+real	3m56,112s
+user	4m13,054s
+sys	0m2,887s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

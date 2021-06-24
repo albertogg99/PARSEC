@@ -1,0 +1,33 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on vie 02 abr 2021 19:12:12 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+LeakSanitizer:DEADLYSIGNAL
+==10201==ERROR: LeakSanitizer: SEGV on unknown address 0x7f1047d7c7d8 (pc 0x5557b92c90f7 bp 0x0000000185f6 sp 0x7ffcda95cd50 T0)
+==10201==The signal is caused by a READ memory access.
+    #0 0x5557b92c90f7 in FP_tree::database_tiling(int) [clone ._omp_fn.0] /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:564
+    #1 0x7f10486558e5 in GOMP_parallel (/lib/x86_64-linux-gnu/libgomp.so.1+0x128e5)
+    #2 0x5557b92cb82f in FP_tree::database_tiling(int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:537
+    #3 0x5557b92cda3b in FP_tree::scan2_DB(int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:1055
+    #4 0x5557b92c7750 in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:154
+    #5 0x7f10484780b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #6 0x5557b92c7b5d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x2b5d)
+
+LeakSanitizer can not provide additional info.
+SUMMARY: LeakSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:564 in FP_tree::database_tiling(int) [clone ._omp_fn.0]
+==10201==ABORTING
+
+real	0m1,758s
+user	0m1,698s
+sys	0m0,060s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

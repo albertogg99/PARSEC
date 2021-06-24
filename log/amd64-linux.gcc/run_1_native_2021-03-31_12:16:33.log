@@ -1,0 +1,36 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on mié 31 mar 2021 12:16:33 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 128 1000000 200000 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 10 20 128 1000000 200000 5000 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+[Server] 1 clients are connected
+read 200000 points
+LeakSanitizer:DEADLYSIGNAL
+==7499==ERROR: LeakSanitizer: SEGV on unknown address 0x7f078a93c000 (pc 0x5572f3c9c96a bp 0x000000030d40 sp 0x7fff61868da0 T0)
+==7499==The signal is caused by a WRITE memory access.
+    #0 0x5572f3c9c96a in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2222
+    #1 0x5572f3c94ce1 in main /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2370
+    #2 0x7f07923860b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #3 0x5572f3c94edd in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server+0x6edd)
+
+LeakSanitizer can not provide additional info.
+SUMMARY: LeakSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2222 in streamCluster(PStream*, long, long, int, long, long, char*)
+==7499==ABORTING
+
+real	0m0,478s
+user	0m0,199s
+sys	0m0,158s

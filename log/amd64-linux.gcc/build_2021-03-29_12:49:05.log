@@ -1,0 +1,35 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on lun 29 mar 2021 12:49:05 CEST.
+[PARSEC] Packages to build:  parsec.netstreamcluster
+
+[PARSEC] [========== Building package parsec.netstreamcluster [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.netstreamcluster ----------]
+[PARSEC] parsec.netstreamcluster depends on: uptcpip
+[PARSEC] [---------- Analyzing package parsec.uptcpip ----------]
+[PARSEC] Package parsec.uptcpip already exists, proceeding.
+[PARSEC] [---------- Building package parsec.netstreamcluster ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.netstreamcluster.
+[PARSEC] Running 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make':
+/usr/bin/make -C server
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -c streamcluster.cpp
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -c parsec_barrier.cpp
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib streamcluster.o parsec_barrier.o  -luptcp -lpthread -o server
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib streamcluster.o parsec_barrier.o  -luptcp.sim -lpthread -o server_sim
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+/usr/bin/make -C client
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/client'
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -c client.cpp
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib client.o  -luptcp.client -lpthread -o client
+/usr/bin/g++ -std=c++17 -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib client.o  -luptcp.client.sim -lpthread -o client_sim
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/client'
+[PARSEC] Running 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin
+cp ./server/server /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./server/server_sim /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./client/client /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./client/client_sim /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./run.sh /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+[PARSEC] Done.

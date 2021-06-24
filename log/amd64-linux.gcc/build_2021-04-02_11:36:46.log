@@ -1,0 +1,9 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on vie 02 abr 2021 11:36:46 CEST.
+[PARSEC] Packages to build:  parsec.netstreamcluster
+
+[PARSEC] [========== Building package parsec.netstreamcluster [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.netstreamcluster ----------]
+[PARSEC] Package parsec.netstreamcluster already exists, proceeding.
+[PARSEC] Done.

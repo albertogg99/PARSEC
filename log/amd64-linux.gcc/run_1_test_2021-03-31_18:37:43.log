@@ -1,0 +1,352 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on mié 31 mar 2021 18:37:43 CEST.
+[PARSEC] Benchmarks to run:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.dedup parsec.facesim parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+in_4.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 1 in_4.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Num of Options: 4
+Num of Runs: 100
+Size of data: 160
+
+real	0m0,006s
+user	0m0,003s
+sys	0m0,003s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+sequenceB_1/
+sequenceB_1/BodyShapeParameters.txt
+sequenceB_1/CALIB/
+sequenceB_1/CALIB/Camera1.cal
+sequenceB_1/CALIB/Camera2.cal
+sequenceB_1/CALIB/Camera3.cal
+sequenceB_1/CALIB/Camera4.cal
+sequenceB_1/CAM1/
+sequenceB_1/CAM1/image0000.bmp
+sequenceB_1/CAM2/
+sequenceB_1/CAM2/image0000.bmp
+sequenceB_1/CAM3/
+sequenceB_1/CAM3/image0000.bmp
+sequenceB_1/CAM4/
+sequenceB_1/CAM4/image0000.bmp
+sequenceB_1/FG1/
+sequenceB_1/FG1/image0000.bmp
+sequenceB_1/FG2/
+sequenceB_1/FG2/image0000.bmp
+sequenceB_1/FG3/
+sequenceB_1/FG3/image0000.bmp
+sequenceB_1/FG4/
+sequenceB_1/FG4/image0000.bmp
+sequenceB_1/InitialPose.txt
+sequenceB_1/PoseParameters.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack sequenceB_1 4 1 5 1 0 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threading with Posix Threads
+Number of threads : 1
+Using dataset : sequenceB_1/
+5 particles with 1 annealing layers
+
+Processing frame 0
+
+real	0m0,056s
+user	0m0,048s
+sys	0m0,008s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+10.nets
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 1 5 100 10.nets 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 1
+5 swaps per temperature step
+start temperature: 100
+netlist filename: 10.nets
+number of temperature steps: 1
+locs created
+locs assigned
+netlist created. 10 elements.
+Final routing is: 132
+
+real	0m0,006s
+user	0m0,006s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+test.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 1 -i test.dat -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                        6.00 Bytes
+Total output size:                      28.00 Bytes
+Effective compression factor:            0.21x
+
+Mean data chunk size:                    0.06 KB (stddev: 0.00 KB)
+Amount of duplicate chunks:              0.00%
+Data size after deduplication:           6.00 Bytes (compression factor: 1.00x)
+Data size after compression:            14.00 Bytes (compression factor: 0.43x)
+Output overhead:                        50.00%
+
+real	0m0,031s
+user	0m0,002s
+sys	0m0,029s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.facesim [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/inst/amd64-linux.gcc/bin/facesim -h':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+/home/alberto/Documentos/TFG/PARSEC/bin/parsecmgmt: line 1190: 15908 Segmentation fault      (core dumped) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/inst/amd64-linux.gcc/bin/facesim -h
+
+real	0m0,085s
+user	0m0,001s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.fluidanimate [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+in_5K.fluid
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin/fluidanimate 1 1 in_5K.fluid out.fluid':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Loading file "in_5K.fluid"...
+Number of cells: 4725
+Grids steps over x, y, z: 0.00866667 0.00857143 0.00866667
+Number of particles: 4800
+Saving file "out.fluid"...
+
+real	0m0,018s
+user	0m0,010s
+sys	0m0,008s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+T10I4D100K_3.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine T10I4D100K_3.dat 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==15965==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x5599e07f0079 bp 0x000000000000 sp 0x7fff9dc41a40 T0)
+==15965==The signal is caused by a READ memory access.
+==15965==Hint: this fault was caused by a dereference of a high value address (see register values below).  Dissassemble the provided pc to learn which register was used.
+    #0 0x5599e07f0079 in FP_tree::database_tiling(int) [clone ._omp_fn.1] /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:725
+    #1 0x7f67b1c498e5 in GOMP_parallel (/lib/x86_64-linux-gnu/libgomp.so.1+0x128e5)
+    #2 0x5599e07f8004 in FP_tree::database_tiling(int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:716
+    #3 0x5599e07fafc7 in FP_tree::scan2_DB(int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:1050
+    #4 0x5599e07ecb0b in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:154
+    #5 0x7f67b1a6c0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #6 0x5599e07ed38d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x538d)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:725 in FP_tree::database_tiling(int) [clone ._omp_fn.1]
+==15965==ABORTING
+
+real	0m0,154s
+user	0m0,032s
+sys	0m0,120s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 test':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 1 10 10 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 2 5 1 10 10 5 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[Server] 1 clients are connected
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+read 10 points
+=================================================================
+==15995==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs free) on 0x619000000080
+[0] Data size = 40B, time =  0.005366s, BW =    0.007MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   0.01s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.000s                0.34
+         Tx_Link              0.000s                0.17
+         Rx_Link              0.000s                0.12
+           Timer              0.000s                1.14
+          Socket              0.000s                0.02
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+    #0 0x7f1775cfb1b7 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7)
+    #1 0x55b6590a70b3 in main /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2372
+    #2 0x7f177572d0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #3 0x55b6590a74cd in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server+0x94cd)
+
+0x619000000080 is located 0 bytes inside of 1024-byte region [0x619000000080,0x619000000480)
+allocated by thread T0 here:
+    #0 0x7f1775cfd087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x55b6590a6e4e in main /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2298
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7) in __interceptor_free
+==15995==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==15995==ABORTING
+
+=================================================================
+==15994==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7f26b8b9b517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x563457ab47df in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7f26b8b9b517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x563457ab3f11 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+SUMMARY: AddressSanitizer: 120 byte(s) leaked in 5 allocation(s).
+
+real	0m0,187s
+user	0m0,032s
+sys	0m0,021s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+octahedron.obj
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/raytrace/inst/amd64-linux.gcc/bin/rtview octahedron.obj -automove -nthreads 1 -frames 1 -res 1 1':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x558673964bc0
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = octahedron.obj;
+   frames = 1;
+ nthreads = 1;
+      res = [1, 1];
+
+Using memory framebuffer...
+Adding obj file: octahedron.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 6 vertices
+adding 8 triangles
+finalizing geometry
+vertices            6 (0.0703125 KB)
+triangles           8 (0.09375 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 3.1e-05
+done
+sceneAABB =[[[-1,-1,-1,0] ],[[1,1,1,0] ]]
+Rendering 1 frames... 
+Done
+
+real	0m0,007s
+user	0m0,000s
+sys	0m0,007s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster 2 5 1 10 10 5 none output.txt 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+read 10 points
+=================================================================
+==16061==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs free) on 0x619000000080
+    #0 0x7f0a6cb451b7 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7)
+    #1 0x5631c696ea0a in main /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/streamcluster/obj/amd64-linux.gcc/streamcluster.cpp:2061
+    #2 0x7f0a6c5770b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #3 0x5631c696edfd in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster+0x3dfd)
+
+0x619000000080 is located 0 bytes inside of 1024-byte region [0x619000000080,0x619000000480)
+allocated by thread T0 here:
+    #0 0x7f0a6cb47087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x5631c696e76e in main /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/streamcluster/obj/amd64-linux.gcc/streamcluster.cpp:1981
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7) in __interceptor_free
+==16061==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==16061==ABORTING
+
+real	0m0,012s
+user	0m0,012s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.swaptions [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/inst/amd64-linux.gcc/bin/swaptions -ns 1 -sm 5 -nt 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Swaption 0: [SwaptionPrice: 22.0700566558 StdError: -nan] 
+Number of Simulations: 5,  Number of threads: 1 Number of swaptions: 1
+
+=================================================================
+==16088==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 5680 byte(s) in 7 object(s) allocated from:
+    #0 0x7f311fd5b517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x562ed250d097 in dvector(long, long) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/obj/amd64-linux.gcc/nr_routines.c:138
+
+Direct leak of 160 byte(s) in 3 object(s) allocated from:
+    #0 0x7f311fd5b517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x562ed250d10d in dmatrix(long, long, long, long) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/obj/amd64-linux.gcc/nr_routines.c:162
+
+Indirect leak of 15992 byte(s) in 3 object(s) allocated from:
+    #0 0x7f311fd5b517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x562ed250d144 in dmatrix(long, long, long, long) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/obj/amd64-linux.gcc/nr_routines.c:168
+
+SUMMARY: AddressSanitizer: 21832 byte(s) leaked in 13 allocation(s).
+
+real	0m0,015s
+user	0m0,014s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

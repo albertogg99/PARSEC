@@ -1,0 +1,7 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on vie 02 abr 2021 19:26:43 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Error: Binary '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine' of package 'parsec.freqmine' cannot be found.

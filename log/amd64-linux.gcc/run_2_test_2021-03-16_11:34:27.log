@@ -1,0 +1,66 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on mar 16 mar 2021 11:34:27 CET.
+[PARSEC] Benchmarks to run:  parsec.bodytrack
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+sequenceB_1/
+sequenceB_1/BodyShapeParameters.txt
+sequenceB_1/CALIB/
+sequenceB_1/CALIB/Camera1.cal
+sequenceB_1/CALIB/Camera2.cal
+sequenceB_1/CALIB/Camera3.cal
+sequenceB_1/CALIB/Camera4.cal
+sequenceB_1/CAM1/
+sequenceB_1/CAM1/image0000.bmp
+sequenceB_1/CAM2/
+sequenceB_1/CAM2/image0000.bmp
+sequenceB_1/CAM3/
+sequenceB_1/CAM3/image0000.bmp
+sequenceB_1/CAM4/
+sequenceB_1/CAM4/image0000.bmp
+sequenceB_1/FG1/
+sequenceB_1/FG1/image0000.bmp
+sequenceB_1/FG2/
+sequenceB_1/FG2/image0000.bmp
+sequenceB_1/FG3/
+sequenceB_1/FG3/image0000.bmp
+sequenceB_1/FG4/
+sequenceB_1/FG4/image0000.bmp
+sequenceB_1/InitialPose.txt
+sequenceB_1/PoseParameters.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack sequenceB_1 4 1 5 1 0 2':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threading with Posix Threads
+Number of threads : 2
+FAILING IN #9
+Unable to load image: sequenceB_1/FG1/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/CAM1/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/FG2/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/CAM2/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/FG3/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/CAM3/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/FG4/image0000.bmp
+FAILING IN #9
+Unable to load image: sequenceB_1/CAM4/image0000.bmp
+Using dataset : sequenceB_1/
+5 particles with 1 annealing layers
+
+Processing frame 0
+/home/alberto/Documentos/TFG/PARSEC/bin/parsecmgmt: línea 1190: 17469 Violación de segmento  (`core' generado) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack sequenceB_1 4 1 5 1 0 2
+
+real	0m0,087s
+user	0m0,003s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

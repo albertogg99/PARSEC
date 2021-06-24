@@ -1,0 +1,82 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 25 mar 2021 13:29:54 CET.
+[PARSEC] Packages to build:  parsec.facesim
+
+[PARSEC] [========== Building package parsec.facesim [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.facesim ----------]
+[PARSEC] parsec.facesim does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.facesim ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.facesim.
+[PARSEC] Running 'env version=pthreads PHYSBAM=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make':
+/usr/bin/make -C TaskQ/lib all
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/lib'
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=leak -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	 -DTASKQ_DIST_FIXED -c taskQDistCommon.c
+mv taskQDistCommon.o taskQ.o
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/lib'
+/usr/bin/make -C Benchmarks/facesim
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Benchmarks/facesim'
+Generating LANDMARK_PROXIMITY_OPTIMIZATION.d
+Generating FACE_OPTIMIZATION.d
+Generating FACE_LANDMARK_OPTIMIZATION_GOAL.d
+Generating FACE_DRIVER.d
+Generating main.d
+cd /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library && /usr/bin/make -f Makefile.PhysBAM
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library'
+Generating Utilities/TIMER.d
+Generating Utilities/STRING_UTILITIES.d
+Generating Utilities/PARSE_ARGS.d
+Generating Utilities/LOG_ENTRY.d
+Generating Utilities/LOG.d
+Generating Utilities/DEBUG_UTILITIES.d
+Generating Thread_Utilities/THREAD_ARRAY_LOCK.d
+Generating Thread_Utilities/THREAD_POOL_SINGLE.d
+Generating Thread_Utilities/THREAD_POOL.d
+Generating Thread_Utilities/THREAD_POOL_ALAMERE.d
+Generating Thread_Utilities/THREAD_DIVISION_PARAMETERS.d
+Generating Solids_And_Fluids/SOLIDS_PARAMETERS_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_EXAMPLE_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER.d
+Generating Solids_And_Fluids/SOLIDS_EVOLUTION_3D.d
+Generating Rigid_Bodies/RIGID_BODY_LIST_3D.d
+Generating Rigid_Bodies/RIGID_BODY_INTERSECTIONS_3D.d
+Generating Rigid_Bodies/RIGID_BODY_EVOLUTION_3D.d
+Generating Rigid_Bodies/RIGID_BODY_COLLISIONS_3D.d
+Generating Rigid_Bodies/RIGID_BODY_3D.d
+Generating Rigid_Bodies/MASS_PROPERTIES_3D.d
+Generating Read_Write/FILE_UTILITIES.d
+Generating Particles/SOLIDS_PARTICLE.d
+Generating Particles/PARTICLE.d
+Generating Matrices_And_Vectors/VECTOR_ND_PARALLEL.d
+Generating Matrices_And_Vectors/SYMMETRIC_MATRIX_3X3.d
+Generating Matrices_And_Vectors/MATRIX_3X3.d
+Generating Level_Sets/LEVELSET_3D.d
+Generating Level_Sets/LEVELSET.d
+Generating Grids/TRIANGLE_MESH.d
+Generating Grids/TETRAHEDRON_MESH.d
+Generating Grids/SEGMENT_MESH.d
+Generating Geometry/TRIANGULATED_SURFACE_LIST.d
+Generating Geometry/TRIANGULATED_SURFACE.d
+Generating Geometry/TRIANGULATED_OBJECT.d
+Generating Geometry/TRIANGLE_3D.d
+Generating Geometry/TETRAHEDRON.d
+Generating Geometry/TETRAHEDRALIZED_VOLUME_LIST.d
+Generating Geometry/TETRAHEDRALIZED_VOLUME.d
+Generating Geometry/SEGMENTED_CURVE_3D.d
+Generating Geometry/SEGMENT_3D.d
+Generating Geometry/SEGMENT_2D.d
+Generating Geometry/PLANE.d
+Generating Geometry/IMPLICIT_SURFACE_LIST.d
+Generating Geometry/IMPLICIT_SURFACE.d
+Generating Geometry/EMBEDDED_TETRAHEDRALIZED_VOLUME.d
+Generating Geometry/EMBEDDED_OBJECT.d
+Generating Geometry/BOX_3D.d
+Generating Geometry/BOX_2D.d
+Generating Forces_And_Torques/DIAGONALIZED_FINITE_VOLUME_3D.d
+Generating Forces_And_Torques/BODY_FORCES_3D.d
+Generating Fracture/EMBEDDED_TETRAHEDRALIZED_VOLUME_BOUNDARY_SURFACE.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT_COLLISIONS_3D.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT_3D.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT.d

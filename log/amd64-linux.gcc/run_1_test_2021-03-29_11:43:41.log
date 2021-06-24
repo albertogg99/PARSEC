@@ -1,0 +1,84 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on lun 29 mar 2021 11:43:41 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 test':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 1 10 10 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 2 5 1 10 10 5 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+
+===========================================[Server] 1 clients are connected
+=================
+  Enter PARSEC TCPIP ROI 
+============================================================
+read 10 points
+[0] Data size = 40B, time =  0.012388s, BW =    0.003MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   0.02s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.000s                0.27
+         Tx_Link              0.000s                0.04
+         Rx_Link              0.000s                0.05
+           Timer              0.000s                0.08
+          Socket              0.000s                0.01
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+
+=================================================================
+==24859==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7fedc89099d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x55ebefe84bdf in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7fedc89099d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x55ebefe84311 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+SUMMARY: LeakSanitizer: 120 byte(s) leaked in 5 allocation(s).
+
+=================================================================
+==24860==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 40 byte(s) in 1 object(s) allocated from:
+    #0 0x7fc79495c9d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x555abe1404cb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2156
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7fc79495c9d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x555abe142971 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+Direct leak of 20 byte(s) in 1 object(s) allocated from:
+    #0 0x7fc79495c9d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x555abe1404bb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2155
+
+Direct leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x7fc79495c722  (/lib/x86_64-linux-gnu/liblsan.so.0+0xf722)
+    #1 0x555abe13f708 in outcenterIDs(Points*, long*, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:1857
+
+SUMMARY: LeakSanitizer: 92 byte(s) leaked in 6 allocation(s).
+
+real	0m0,200s
+user	0m0,048s
+sys	0m0,022s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

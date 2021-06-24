@@ -1,0 +1,9 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 01 abr 2021 12:09:45 CEST.
+[PARSEC] Packages to build:  parsec.freqmine
+
+[PARSEC] [========== Building package parsec.freqmine [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.freqmine ----------]
+[PARSEC] Package parsec.freqmine already exists, proceeding.
+[PARSEC] Done.

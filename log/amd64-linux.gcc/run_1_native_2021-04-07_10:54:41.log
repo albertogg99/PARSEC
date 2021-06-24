@@ -1,0 +1,49 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on mié 07 abr 2021 10:54:41 CEST.
+[PARSEC] Benchmarks to run:  parsec.raytrace
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+thai_statue.obj
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/inst/amd64-linux.gcc/bin/rtview thai_statue.obj -automove -nthreads 1 -frames 200 -res 1920 1080':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x556b1a9cc0c0
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = thai_statue.obj;
+   frames = 200;
+ nthreads = 1;
+      res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: thai_statue.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 4999996 vertices
+adding 10000000 triangles
+finalizing geometry
+vertices            4999996 (58593.7 KB)
+triangles           10000000 (117188 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 11.5039
+done
+sceneAABB =[[[-117.959,-195.497,-99.8228,0] ],[[117.252,205.549,103.342,0] ]]
+Rendering 200 frames... 
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:684:41: runtime error: left shift of negative value -2147483648
+Done
+
+real	3m5,216s
+user	3m4,568s
+sys	0m0,536s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

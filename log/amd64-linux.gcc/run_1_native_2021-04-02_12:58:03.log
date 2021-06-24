@@ -1,0 +1,34 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on vie 02 abr 2021 12:58:03 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==43044==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55f6f60e1c8b bp 0x602000000030 sp 0x7ffde518a130 T0)
+==43044==The signal is caused by a READ memory access.
+==43044==Hint: address points to the zero page.
+    #0 0x55f6f60e1c8b in MapFileNode::finalize() /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:141
+    #1 0x55f6f60e1c8b in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:66
+    #2 0x55f6f60eb7ea in FP_tree::scan1_DB(Data*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:760
+    #3 0x55f6f60dfaef in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:151
+    #4 0x7f5f634bf0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #5 0x55f6f60e042d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x542d)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:141 in MapFileNode::finalize()
+==43044==ABORTING
+
+real	0m0,013s
+user	0m0,013s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

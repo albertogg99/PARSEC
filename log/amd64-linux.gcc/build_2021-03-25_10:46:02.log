@@ -1,0 +1,22 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 25 mar 2021 10:46:02 CET.
+[PARSEC] Packages to build:  parsec.canneal
+
+[PARSEC] [========== Building package parsec.canneal [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.canneal ----------]
+[PARSEC] parsec.canneal does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.canneal ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.canneal.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread annealer_thread.cpp -c -o annealer_thread.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread rng.cpp -c -o rng.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist.cpp -c -o netlist.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread main.cpp -c -o main.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist_elem.cpp -c -o netlist_elem.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=undefined -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread -L/usr/lib64 -L/usr/lib *.o  -lm -o canneal
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin
+cp -f canneal /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal
+[PARSEC] Done.

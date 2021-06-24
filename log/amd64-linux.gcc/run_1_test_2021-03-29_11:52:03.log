@@ -1,0 +1,88 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on lun 29 mar 2021 11:52:03 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 test':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 1 10 10 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 2 5 1 10 10 5 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+[Server] 1 clients are connected
+read 10 points
+[0] Data size = 40B, time =  0.005674s, BW =    0.007MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   0.01s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.000s                0.53
+         Tx_Link              0.000s                0.19
+         Rx_Link              0.000s                0.15
+           Timer              0.000s                1.37
+          Socket              0.000s                0.01
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+
+=================================================================
+==27043==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7f73649249d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x556b2116fbdf in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7f73649249d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x556b2116f311 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+SUMMARY: LeakSanitizer: 120 byte(s) leaked in 5 allocation(s).
+
+=================================================================
+==27044==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 160 byte(s) in 1 object(s) allocated from:
+    #0 0x7f05bf2c59d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x5635ff44e4df in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2166
+
+Direct leak of 96 byte(s) in 2 object(s) allocated from:
+    #0 0x7f05bf2c59d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x5635ff45123f in host_pthread_cond_init /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:800
+
+Direct leak of 40 byte(s) in 1 object(s) allocated from:
+    #0 0x7f05bf2c59d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x5635ff44e4cb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2157
+
+Direct leak of 24 byte(s) in 3 object(s) allocated from:
+    #0 0x7f05bf2c59d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x5635ff450971 in host_thread_create /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:330
+
+Indirect leak of 20 byte(s) in 1 object(s) allocated from:
+    #0 0x7f05bf2c59d1 in malloc (/lib/x86_64-linux-gnu/liblsan.so.0+0xf9d1)
+    #1 0x5635ff44e4bb in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2156
+
+SUMMARY: LeakSanitizer: 340 byte(s) leaked in 8 allocation(s).
+
+real	0m0,206s
+user	0m0,061s
+sys	0m0,012s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

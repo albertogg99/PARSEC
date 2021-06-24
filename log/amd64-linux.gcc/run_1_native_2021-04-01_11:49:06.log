@@ -1,0 +1,39 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on jue 01 abr 2021 11:49:06 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+=================================================================
+==18924==ERROR: AddressSanitizer: attempting double-free on 0x615000000080 in thread T0:
+    #0 0x7fe3ca45d1b7 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7)
+    #1 0x7fe3ca01d042 in _IO_fclose (/lib/x86_64-linux-gnu/libc.so.6+0x85042)
+    #2 0x7fe3ca43a6a8 in __interceptor_fclose (/lib/x86_64-linux-gnu/libasan.so.6+0x8d6a8)
+    #3 0x563b3fb13b38 in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:156
+    #4 0x7fe3c9fbf0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #5 0x563b3fb1439d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x539d)
+
+0x615000000080 is located 0 bytes inside of 472-byte region [0x615000000080,0x615000000258)
+freed by thread T0 here:
+    #0 0x7fe3ca45d1b7 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7)
+    #1 0x7fe3ca01d042 in _IO_fclose (/lib/x86_64-linux-gnu/libc.so.6+0x85042)
+
+previously allocated by thread T0 here:
+    #0 0x7fe3ca45d517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x7fe3ca01daad in _IO_fopen (/lib/x86_64-linux-gnu/libc.so.6+0x85aad)
+
+SUMMARY: AddressSanitizer: double-free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7) in __interceptor_free
+==18924==ABORTING
+
+real	0m1,047s
+user	0m0,730s
+sys	0m0,315s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

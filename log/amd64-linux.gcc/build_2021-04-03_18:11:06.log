@@ -1,0 +1,510 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on sáb 03 abr 2021 18:11:06 CEST.
+[PARSEC] Packages to build:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Building package parsec.blackscholes [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.blackscholes ----------]
+[PARSEC] parsec.blackscholes does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.blackscholes ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.blackscholes.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+rm -f blackscholes blackscholes.m4.cpp
+/usr/bin/m4 ./c.m4.pthreads blackscholes.c > blackscholes.m4.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -pthread -DENABLE_THREADS -DNCO=4   blackscholes.m4.cpp -L/usr/lib64 -L/usr/lib  -o blackscholes
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin
+cp -f blackscholes /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] parsec.bodytrack does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.bodytrack ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/configure --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc':
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... mawk
+checking whether /usr/bin/make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for style of include used by /usr/bin/make... GNU
+checking for gcc... /usr/bin/gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking dependency style of /usr/bin/gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether /usr/bin/g++ accepts -g... yes
+checking dependency style of /usr/bin/g++... gcc3
+checking how to run the C++ preprocessor... /usr/bin/g++ -E
+checking for g77... no
+checking for f77... no
+checking for xlf... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for f90... no
+checking for xlf90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for f95... no
+checking for fort... no
+checking for xlf95... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for objdir... .libs
+checking for ar... /usr/bin/ar
+checking for ranlib... /usr/bin/ranlib
+checking for strip... /usr/bin/strip
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC
+checking if /usr/bin/gcc PIC flag -fPIC works... yes
+checking if /usr/bin/gcc static flag -static works... yes
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by /usr/bin/g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /usr/bin/g++ option to produce PIC... -fPIC
+checking if /usr/bin/g++ PIC flag -fPIC works... yes
+checking if /usr/bin/g++ static flag -static works... yes
+checking if /usr/bin/g++ supports -c -o file.o... yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /usr/bin/g++ accepts -g... (cached) yes
+checking dependency style of /usr/bin/g++... (cached) gcc3
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/make sets $(MAKE)... (cached) yes
+checking for main in -lpthread... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for stdint.h... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for memset... yes
+checking for sqrt... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating FlexImageLib/Makefile
+config.status: creating TrackingBenchmark/Makefile
+config.status: creating TrackingBenchmark/threads/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make':
+cd /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src && /bin/bash /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/missing --run autoheader
+rm -f stamp-h1
+touch /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/config.h.in
+cd . && /bin/bash ./config.status config.h
+config.status: creating config.h
+config.status: config.h is unchanged
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+Making all in FlexImageLib
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+if /bin/bash ../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I..     -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF ".deps/FlexImage.Tpo" -c -o FlexImage.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp; \
+then mv -f ".deps/FlexImage.Tpo" ".deps/FlexImage.Plo"; else rm -f ".deps/FlexImage.Tpo"; exit 1; fi
+mkdir .libs
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF .deps/FlexImage.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp  -fPIC -DPIC -o .libs/FlexImage.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF .deps/FlexImage.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp -o FlexImage.o >/dev/null 2>&1
+if /bin/bash ../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I..     -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF ".deps/FlexIO.Tpo" -c -o FlexIO.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp; \
+then mv -f ".deps/FlexIO.Tpo" ".deps/FlexIO.Plo"; else rm -f ".deps/FlexIO.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF .deps/FlexIO.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp  -fPIC -DPIC -o .libs/FlexIO.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF .deps/FlexIO.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp -o FlexIO.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX --mode=link /usr/bin/g++  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o libflex.la   FlexImage.lo FlexIO.lo  -lpthread 
+/usr/bin/ar cru .libs/libflex.a .libs/FlexImage.o .libs/FlexIO.o
+/usr/bin/ranlib .libs/libflex.a
+creating libflex.la
+(cd .libs && rm -f libflex.la && ln -s ../libflex.la libflex.la)
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+Making all in TrackingBenchmark
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+Making all in threads
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF ".deps/Thread.Tpo" -c -o Thread.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp; \
+then mv -f ".deps/Thread.Tpo" ".deps/Thread.Plo"; else rm -f ".deps/Thread.Tpo"; exit 1; fi
+mkdir .libs
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF .deps/Thread.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp  -fPIC -DPIC -o .libs/Thread.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF .deps/Thread.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp -o Thread.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF ".deps/ThreadGroup.Tpo" -c -o ThreadGroup.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp; \
+then mv -f ".deps/ThreadGroup.Tpo" ".deps/ThreadGroup.Plo"; else rm -f ".deps/ThreadGroup.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF .deps/ThreadGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp  -fPIC -DPIC -o .libs/ThreadGroup.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF .deps/ThreadGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp -o ThreadGroup.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF ".deps/WorkerGroup.Tpo" -c -o WorkerGroup.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp; \
+then mv -f ".deps/WorkerGroup.Tpo" ".deps/WorkerGroup.Plo"; else rm -f ".deps/WorkerGroup.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF .deps/WorkerGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp  -fPIC -DPIC -o .libs/WorkerGroup.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF .deps/WorkerGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp -o WorkerGroup.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF ".deps/Mutex.Tpo" -c -o Mutex.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp; \
+then mv -f ".deps/Mutex.Tpo" ".deps/Mutex.Plo"; else rm -f ".deps/Mutex.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF .deps/Mutex.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp  -fPIC -DPIC -o .libs/Mutex.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF .deps/Mutex.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp -o Mutex.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF ".deps/Condition.Tpo" -c -o Condition.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp; \
+then mv -f ".deps/Condition.Tpo" ".deps/Condition.Plo"; else rm -f ".deps/Condition.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF .deps/Condition.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp  -fPIC -DPIC -o .libs/Condition.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF .deps/Condition.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp -o Condition.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF ".deps/Barrier.Tpo" -c -o Barrier.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp; \
+then mv -f ".deps/Barrier.Tpo" ".deps/Barrier.Plo"; else rm -f ".deps/Barrier.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF .deps/Barrier.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp  -fPIC -DPIC -o .libs/Barrier.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF .deps/Barrier.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp -o Barrier.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF ".deps/RWLock.Tpo" -c -o RWLock.lo /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp; \
+then mv -f ".deps/RWLock.Tpo" ".deps/RWLock.Plo"; else rm -f ".deps/RWLock.Tpo"; exit 1; fi
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF .deps/RWLock.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp  -fPIC -DPIC -o .libs/RWLock.o
+ /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF .deps/RWLock.Tpo -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp -o RWLock.o >/dev/null 2>&1
+/bin/bash ../../libtool --tag=CXX --mode=link /usr/bin/g++  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o libthreads.la   Thread.lo ThreadGroup.lo WorkerGroup.lo Mutex.lo Condition.lo Barrier.lo RWLock.lo  -lpthread 
+/usr/bin/ar cru .libs/libthreads.a .libs/Thread.o .libs/ThreadGroup.o .libs/WorkerGroup.o .libs/Mutex.o .libs/Condition.o .libs/Barrier.o .libs/RWLock.o
+/usr/bin/ranlib .libs/libthreads.a
+creating libthreads.la
+(cd .libs && rm -f libthreads.la && ln -s ../libthreads.la libthreads.la)
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT AnnealingFactor.o -MD -MP -MF ".deps/AnnealingFactor.Tpo" -c -o AnnealingFactor.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/AnnealingFactor.cpp; \
+then mv -f ".deps/AnnealingFactor.Tpo" ".deps/AnnealingFactor.Po"; else rm -f ".deps/AnnealingFactor.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT BodyGeometry.o -MD -MP -MF ".deps/BodyGeometry.Tpo" -c -o BodyGeometry.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/BodyGeometry.cpp; \
+then mv -f ".deps/BodyGeometry.Tpo" ".deps/BodyGeometry.Po"; else rm -f ".deps/BodyGeometry.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT BodyPose.o -MD -MP -MF ".deps/BodyPose.Tpo" -c -o BodyPose.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/BodyPose.cpp; \
+then mv -f ".deps/BodyPose.Tpo" ".deps/BodyPose.Po"; else rm -f ".deps/BodyPose.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT CameraModel.o -MD -MP -MF ".deps/CameraModel.Tpo" -c -o CameraModel.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/CameraModel.cpp; \
+then mv -f ".deps/CameraModel.Tpo" ".deps/CameraModel.Po"; else rm -f ".deps/CameraModel.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT CovarianceMatrix.o -MD -MP -MF ".deps/CovarianceMatrix.Tpo" -c -o CovarianceMatrix.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/CovarianceMatrix.cpp; \
+then mv -f ".deps/CovarianceMatrix.Tpo" ".deps/CovarianceMatrix.Po"; else rm -f ".deps/CovarianceMatrix.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ImageMeasurements.o -MD -MP -MF ".deps/ImageMeasurements.Tpo" -c -o ImageMeasurements.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/ImageMeasurements.cpp; \
+then mv -f ".deps/ImageMeasurements.Tpo" ".deps/ImageMeasurements.Po"; else rm -f ".deps/ImageMeasurements.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ImageProjection.o -MD -MP -MF ".deps/ImageProjection.Tpo" -c -o ImageProjection.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/ImageProjection.cpp; \
+then mv -f ".deps/ImageProjection.Tpo" ".deps/ImageProjection.Po"; else rm -f ".deps/ImageProjection.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RandomGenerator.o -MD -MP -MF ".deps/RandomGenerator.Tpo" -c -o RandomGenerator.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/RandomGenerator.cpp; \
+then mv -f ".deps/RandomGenerator.Tpo" ".deps/RandomGenerator.Po"; else rm -f ".deps/RandomGenerator.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT TrackingModel.o -MD -MP -MF ".deps/TrackingModel.Tpo" -c -o TrackingModel.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/TrackingModel.cpp; \
+then mv -f ".deps/TrackingModel.Tpo" ".deps/TrackingModel.Po"; else rm -f ".deps/TrackingModel.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/main.cpp; \
+then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT TrackingModelPthread.o -MD -MP -MF ".deps/TrackingModelPthread.Tpo" -c -o TrackingModelPthread.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/TrackingModelPthread.cpp; \
+then mv -f ".deps/TrackingModelPthread.Tpo" ".deps/TrackingModelPthread.Po"; else rm -f ".deps/TrackingModelPthread.Tpo"; exit 1; fi
+if /usr/bin/g++ -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT AsyncIO.o -MD -MP -MF ".deps/AsyncIO.Tpo" -c -o AsyncIO.o /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/TrackingBenchmark/AsyncIO.cpp; \
+then mv -f ".deps/AsyncIO.Tpo" ".deps/AsyncIO.Po"; else rm -f ".deps/AsyncIO.Tpo"; exit 1; fi
+/bin/bash ../libtool --tag=CXX --mode=link /usr/bin/g++  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o bodytrack  AnnealingFactor.o BodyGeometry.o BodyPose.o CameraModel.o CovarianceMatrix.o ImageMeasurements.o ImageProjection.o RandomGenerator.o TrackingModel.o main.o  TrackingModelPthread.o AsyncIO.o  ../FlexImageLib/libflex.la -lm threads/libthreads.la  -lpthread 
+mkdir .libs
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both -Wl,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -o bodytrack AnnealingFactor.o BodyGeometry.o BodyPose.o CameraModel.o CovarianceMatrix.o ImageMeasurements.o ImageProjection.o RandomGenerator.o TrackingModel.o main.o TrackingModelPthread.o AsyncIO.o  -L/usr/lib64 -L/usr/lib ../FlexImageLib/.libs/libflex.a -lm threads/.libs/libthreads.a -lpthread  
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make install':
+Making install in FlexImageLib
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+Making install in TrackingBenchmark
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+Making install in threads
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+test -z "/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin" || mkdir -p -- "/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin"
+  /bin/bash ../libtool --mode=install /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c 'bodytrack' '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack'
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c bodytrack /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+
+[PARSEC] [========== Building package parsec.canneal [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.canneal ----------]
+[PARSEC] parsec.canneal does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.canneal ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.canneal.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread annealer_thread.cpp -c -o annealer_thread.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread rng.cpp -c -o rng.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist.cpp -c -o netlist.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread main.cpp -c -o main.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist_elem.cpp -c -o netlist_elem.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread -L/usr/lib64 -L/usr/lib *.o  -lm -o canneal
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin
+cp -f canneal /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal
+
+[PARSEC] [========== Building package parsec.fluidanimate [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.fluidanimate ----------]
+[PARSEC] parsec.fluidanimate does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.fluidanimate ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.fluidanimate.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+/usr/bin/make -f Makefile.pthreads all
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/fluidanimate/obj/amd64-linux.gcc'
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wno-invalid-offsetof -pthread -D_GNU_SOURCE -D__XOPEN_SOURCE=600 -c pthreads.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wno-invalid-offsetof -pthread -D_GNU_SOURCE -D__XOPEN_SOURCE=600 -c cellpool.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wno-invalid-offsetof -pthread -D_GNU_SOURCE -D__XOPEN_SOURCE=600 -c parsec_barrier.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wno-invalid-offsetof -pthread -D_GNU_SOURCE -D__XOPEN_SOURCE=600 pthreads.o cellpool.o parsec_barrier.o -L/usr/lib64 -L/usr/lib  -o fluidanimate
+rm -rf fluidcmp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wno-invalid-offsetof -pthread -D_GNU_SOURCE -D__XOPEN_SOURCE=600 fluidcmp.cpp -o fluidcmp
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/fluidanimate/obj/amd64-linux.gcc'
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin
+cp -f fluidanimate /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin
+cp -f fluidcmp /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin
+
+[PARSEC] [========== Building package parsec.freqmine [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.freqmine ----------]
+[PARSEC] parsec.freqmine does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.freqmine ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.freqmine.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp /usr/bin/make':
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c fpmax.cpp -o fpgrowth.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c data.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c fp_tree.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c buffer.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c fsout.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c fp_node.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c wtime.cpp -o wtime.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -L/usr/lib64 -L/usr/lib fpgrowth.o data.o fp_tree.o buffer.o fsout.o fp_node.o wtime.o  -o freqmine
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin
+cp -f freqmine /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine
+
+[PARSEC] [========== Building package parsec.netstreamcluster [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.netstreamcluster ----------]
+[PARSEC] parsec.netstreamcluster depends on: uptcpip
+[PARSEC] [---------- Analyzing package parsec.uptcpip ----------]
+[PARSEC] parsec.uptcpip does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.uptcpip ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.uptcpip.
+[PARSEC] Running 'env /usr/bin/make':
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.kern'
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_tc.o kern_tc.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_shutdown.o kern_shutdown.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o subr_prf.o subr_prf.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o subr_bufring.o subr_bufring.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_mbuf.o kern_mbuf.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uma_core.o uma_core.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_malloc.o kern_malloc.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_timeout.o kern_timeout.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_clock.o kern_clock.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_intr.o kern_intr.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_synch.o kern_synch.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_mutex.o kern_mutex.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_rwlock.o kern_rwlock.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_sx.o kern_sx.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_syscalls.o uipc_syscalls.c
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.kern'
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.netinet'
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o if_ether.o if_ether.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o igmp.o igmp.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in.o in.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_gif.o in_gif.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_id.o ip_id.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_mcast.o in_mcast.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_pcb.o in_pcb.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_proto.o in_proto.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_rmx.o in_rmx.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_ecn.o ip_ecn.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_encap.o ip_encap.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_fastfwd.o ip_fastfwd.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_icmp.o ip_icmp.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_input.o ip_input.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_options.o ip_options.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o ip_output.o ip_output.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o raw_ip.o raw_ip.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_hostcache.o tcp_hostcache.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_input.o tcp_input.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_lro.o tcp_lro.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_output.o tcp_output.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_offload.o tcp_offload.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_reass.o tcp_reass.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_sack.o tcp_sack.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_subr.o tcp_subr.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_syncache.o tcp_syncache.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_timer.o tcp_timer.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_timewait.o tcp_timewait.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o tcp_usrreq.o tcp_usrreq.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o udp_usrreq.o udp_usrreq.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o arc4random.o arc4random.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o divdi3.o divdi3.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o udivdi3.o udivdi3.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o harvest.o harvest.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o if.o if.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o if_gif.o if_gif.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o if_loop.o if_loop.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o if_llatbl.o if_llatbl.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o in_cksum.o in_cksum.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o inet_ntoa.o inet_ntoa.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o md5c.o md5c.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o netisr.o netisr.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o radix.o radix.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o route.o route.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_domain.o uipc_domain.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_mbuf2.o uipc_mbuf2.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_mbuf.o uipc_mbuf.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_sockbuf.o uipc_sockbuf.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o uipc_socket.o uipc_socket.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o strlcpy.o strlcpy.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o qdivrem.o qdivrem.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o subr_sbuf.o subr_sbuf.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o kern_subr.o kern_subr.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/   -c -o support.o support.c
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.netinet'
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support'
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -c -o host_serv.o host_serv.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -DUPTCP_CLIENT -c -o host_serv.o.client host_serv.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -c -o if_host.o if_host.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -DUPTCP_CLIENT -c -o if_host.o.client if_host.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -DFOR_SIMULATION -c -o if_host.o.sim if_host.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -DFOR_SIMULATION -DUPTCP_CLIENT -c -o if_host.o.client.sim if_host.c
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -c -o uptcp_statis.o uptcp_statis.c 
+gcc -DX86_64 -D__LP64__ -rdynamic  -ffreestanding -O2  -g -Wall -D_FREEBSD_KERNEL -D_GNU_SOURCE -DSMP  -I../include/ -I../include/opt/ -I../host.support/ -I../lib/ -DUPTCP_CLIENT -c -o uptcp_statis.o.client uptcp_statis.c 
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support'
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/lib'
+gcc -std=c99 -fPIC -ffreestanding -O2  -g -D_XOPEN_SOURCE -Wall -I../host.support/  -c -o uptcp_api.o uptcp_api.c 
+gcc -std=c99 -fPIC -ffreestanding -O2  -g -D_XOPEN_SOURCE -Wall -I../host.support/ -DUPTCP_CLIENT -c -o uptcp_api.o.client uptcp_api.c
+ar rcs libuptcp.a ../freebsd.kern/*.o ../freebsd.netinet/*.o *.o ../host.support/uptcp_statis.o         ../host.support/host_serv.o         ../host.support/if_host.o 
+ar rcs libuptcp.client.a ../freebsd.kern/*.o ../freebsd.netinet/*.o *.o.client ../host.support/uptcp_statis.o.client  ../host.support/host_serv.o.client  ../host.support/if_host.o.client
+ar rcs libuptcp.sim.a ../freebsd.kern/*.o ../freebsd.netinet/*.o  *.o ../host.support/uptcp_statis.o         ../host.support/host_serv.o         ../host.support/if_host.o.sim
+ar rcs libuptcp.client.sim.a ../freebsd.kern/*.o ../freebsd.netinet/*.o *.o.client ../host.support/uptcp_statis.o.client  ../host.support/host_serv.o.client  ../host.support/if_host.o.client.sim
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/lib'
+[PARSEC] Running 'env /usr/bin/make install':
+/usr/bin/make -C lib install;
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/lib'
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib
+cp *.a /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include
+cp *.h /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/lib'
+[PARSEC] [---------- Building package parsec.netstreamcluster ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.netstreamcluster.
+[PARSEC] Running 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make':
+/usr/bin/make -C server
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -c streamcluster.cpp
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -c parsec_barrier.cpp
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib streamcluster.o parsec_barrier.o  -luptcp -lpthread -o server
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib streamcluster.o parsec_barrier.o  -luptcp.sim -lpthread -o server_sim
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+/usr/bin/make -C client
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/client'
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -c client.cpp
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib client.o  -luptcp.client -lpthread -o client
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_PARSEC_UPTCPIP -L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib client.o  -luptcp.client.sim -lpthread -o client_sim
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/client'
+[PARSEC] Running 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin
+cp ./server/server /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./server/server_sim /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./client/client /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./client/client_sim /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+cp ./run.sh /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin 
+
+[PARSEC] [========== Building package parsec.raytrace [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.raytrace ----------]
+[PARSEC] parsec.raytrace depends on: cmake mesa
+[PARSEC] [---------- Analyzing package parsec.cmake ----------]
+[PARSEC] parsec.cmake does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.cmake ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/src/configure --prefix=/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/inst/amd64-linux.gcc':
+---------------------------------------------
+CMake 2.6-1, Copyright (c) 2007 Kitware, Inc., Insight Consortium
+C compiler on this system is: /usr/bin/gcc  -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206
+C++ compiler on this system is: /usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions
+Makefile processor on this system is: /usr/bin/make
+/usr/bin/g++ is GNU compiler
+/usr/bin/g++ has STL in std:: namespace
+/usr/bin/g++ has ANSI streams
+/usr/bin/g++ has streams in std:: namespace
+/usr/bin/g++ has sstream
+/usr/bin/g++ has operator!=(string, char*)
+/usr/bin/g++ has stl iterator_traits
+/usr/bin/g++ has standard template allocator
+/usr/bin/g++ has allocator<>::rebind<>
+/usr/bin/g++ does not have non-standard allocator<>::max_size argument
+/usr/bin/g++ has stl containers supporting allocator objects
+/usr/bin/g++ has header cstddef
+/usr/bin/g++ requires template friends to use <>
+/usr/bin/g++ supports member templates
+/usr/bin/g++ has standard template specialization syntax
+/usr/bin/g++ has argument dependent lookup
+/usr/bin/g++ has struct stat with st_mtim member
+/usr/bin/g++ has ANSI for scoping
+---------------------------------------------
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/src/Source   -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/obj/amd64-linux.gcc/Bootstrap.cmk -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/src/Source/cmake.cxx -o cmake.o
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/src/Source   -I/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/obj/amd64-linux.gcc/Bootstrap.cmk -c /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/tools/cmake/src/Source/cmakemain.cxx -o cmakemain.o

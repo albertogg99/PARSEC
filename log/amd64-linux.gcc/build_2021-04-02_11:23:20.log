@@ -1,0 +1,19 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on vie 02 abr 2021 11:23:20 CEST.
+[PARSEC] Packages to build:  parsec.netstreamcluster
+
+[PARSEC] [========== Building package parsec.netstreamcluster [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.netstreamcluster ----------]
+[PARSEC] parsec.netstreamcluster depends on: uptcpip
+[PARSEC] [---------- Analyzing package parsec.uptcpip ----------]
+[PARSEC] Package parsec.uptcpip already exists, proceeding.
+[PARSEC] [---------- Building package parsec.netstreamcluster ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.netstreamcluster.
+[PARSEC] Running 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make':
+/usr/bin/make -C server
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+/usr/bin/g++ -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -lpthread -DENABLE_PARSEC_UPTCPIP -c streamcluster.cpp
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server'
+[PARSEC] Error: 'env version=pthreads CXXFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make' failed.

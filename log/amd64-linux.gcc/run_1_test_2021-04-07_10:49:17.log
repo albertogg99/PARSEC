@@ -1,0 +1,57 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on mié 07 abr 2021 10:49:17 CEST.
+[PARSEC] Benchmarks to run:  parsec.raytrace
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+octahedron.obj
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/inst/amd64-linux.gcc/bin/rtview octahedron.obj -automove -nthreads 1 -frames 1 -res 1 1':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x55b2abd2da80
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = octahedron.obj;
+   frames = 1;
+ nthreads = 1;
+      res = [1, 1];
+
+Using memory framebuffer...
+Adding obj file: octahedron.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 6 vertices
+adding 8 triangles
+finalizing geometry
+vertices            6 (0.0703125 KB)
+triangles           8 (0.09375 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 2.6e-05
+done
+sceneAABB =[[[-1,-1,-1,0] ],[[1,1,1,0] ]]
+Rendering 1 frames... 
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:483:33: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:483:65: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:484:34: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:484:67: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:485:34: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:485:68: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:486:34: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:486:68: runtime error: left shift of negative value -1
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/raytrace/obj/amd64-linux.gcc/RTTL/common/RTEmulatedSSE.hxx:684:41: runtime error: left shift of negative value -2147483648
+Done
+
+real	0m0,006s
+user	0m0,000s
+sys	0m0,005s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

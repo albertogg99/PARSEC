@@ -1,0 +1,12 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on mar 16 mar 2021 11:47:27 CET.
+[PARSEC] Packages to build:  parsec.bodytrack
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] parsec.bodytrack does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.bodytrack ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/configure --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc':
+[PARSEC] Error: 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/configure --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc' failed.

@@ -1,0 +1,7 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on sáb 03 abr 2021 15:18:39 CEST.
+[PARSEC] Benchmarks to run:  parsec.streamcluster
+
+[PARSEC] [========== Running benchmark parsec.streamcluster [1] ==========]
+[PARSEC] Error: Binary '/home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster' of package 'parsec.streamcluster' cannot be found.

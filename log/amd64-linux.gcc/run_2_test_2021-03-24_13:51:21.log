@@ -1,0 +1,43 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on mié 24 mar 2021 13:51:21 CET.
+[PARSEC] Benchmarks to run:  parsec.raytrace
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+octahedron.obj
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/raytrace/inst/amd64-linux.gcc/bin/rtview octahedron.obj -automove -nthreads 2 -frames 1 -res 1 1':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x95b140
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = octahedron.obj;
+   frames = 1;
+ nthreads = 2;
+      res = [1, 1];
+
+Using memory framebuffer...
+Adding obj file: octahedron.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 6 vertices
+adding 8 triangles
+finalizing geometry
+vertices            6 (0.0703125 KB)
+triangles           8 (0.09375 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 8e-06
+done
+sceneAABB =[[[-1,-1,-1,0] ],[[1,1,1,0] ]]
+Rendering 1 frames... 
+-> starting 2 threads...done
+Done

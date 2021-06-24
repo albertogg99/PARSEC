@@ -1,0 +1,35 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on jue 08 abr 2021 11:32:36 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+T10I4D100K_3.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine T10I4D100K_3.dat 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==22227==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x55a012eaf119 bp 0x000000000000 sp 0x7ffe46ea23f0 T0)
+==22227==The signal is caused by a READ memory access.
+==22227==Hint: this fault was caused by a dereference of a high value address (see register values below).  Dissassemble the provided pc to learn which register was used.
+    #0 0x55a012eaf119 in FP_tree::database_tiling(int) [clone ._omp_fn.1] /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:730
+    #1 0x7f92658468e5 in GOMP_parallel (/lib/x86_64-linux-gnu/libgomp.so.1+0x128e5)
+    #2 0x55a012eb70a4 in FP_tree::database_tiling(int) /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:721
+    #3 0x55a012eba067 in FP_tree::scan2_DB(int) /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:1055
+    #4 0x55a012eabb0b in main /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:154
+    #5 0x7f92656690b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #6 0x55a012eac42d in _start (/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x542d)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:730 in FP_tree::database_tiling(int) [clone ._omp_fn.1]
+==22227==ABORTING
+
+real	0m0,180s
+user	0m0,049s
+sys	0m0,115s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

@@ -1,0 +1,385 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input simlarge started on vie 12 mar 2021 13:24:20 CET.
+[PARSEC] Benchmarks to run:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.dedup parsec.facesim parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+in_64K.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 8 in_64K.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Num of Options: 65536
+Num of Runs: 100
+Size of data: 2621440
+
+real	0m0,095s
+user	0m0,301s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+sequenceB_4/
+sequenceB_4/BodyShapeParameters.txt
+sequenceB_4/CALIB/
+sequenceB_4/CALIB/Camera1.cal
+sequenceB_4/CALIB/Camera2.cal
+sequenceB_4/CALIB/Camera3.cal
+sequenceB_4/CALIB/Camera4.cal
+sequenceB_4/CAM1/
+sequenceB_4/CAM1/image0000.bmp
+sequenceB_4/CAM1/image0001.bmp
+sequenceB_4/CAM1/image0002.bmp
+sequenceB_4/CAM1/image0003.bmp
+sequenceB_4/CAM2/
+sequenceB_4/CAM2/image0000.bmp
+sequenceB_4/CAM2/image0001.bmp
+sequenceB_4/CAM2/image0002.bmp
+sequenceB_4/CAM2/image0003.bmp
+sequenceB_4/CAM3/
+sequenceB_4/CAM3/image0000.bmp
+sequenceB_4/CAM3/image0001.bmp
+sequenceB_4/CAM3/image0002.bmp
+sequenceB_4/CAM3/image0003.bmp
+sequenceB_4/CAM4/
+sequenceB_4/CAM4/image0000.bmp
+sequenceB_4/CAM4/image0001.bmp
+sequenceB_4/CAM4/image0002.bmp
+sequenceB_4/CAM4/image0003.bmp
+sequenceB_4/FG1/
+sequenceB_4/FG1/image0000.bmp
+sequenceB_4/FG1/image0001.bmp
+sequenceB_4/FG1/image0002.bmp
+sequenceB_4/FG1/image0003.bmp
+sequenceB_4/FG2/
+sequenceB_4/FG2/image0000.bmp
+sequenceB_4/FG2/image0001.bmp
+sequenceB_4/FG2/image0002.bmp
+sequenceB_4/FG2/image0003.bmp
+sequenceB_4/FG3/
+sequenceB_4/FG3/image0000.bmp
+sequenceB_4/FG3/image0001.bmp
+sequenceB_4/FG3/image0002.bmp
+sequenceB_4/FG3/image0003.bmp
+sequenceB_4/FG4/
+sequenceB_4/FG4/image0000.bmp
+sequenceB_4/FG4/image0001.bmp
+sequenceB_4/FG4/image0002.bmp
+sequenceB_4/FG4/image0003.bmp
+sequenceB_4/InitialPose.txt
+sequenceB_4/PoseParameters.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack sequenceB_4 4 4 4000 5 0 8':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threading with Posix Threads
+Number of threads : 8
+Using dataset : sequenceB_4/
+4000 particles with 5 annealing layers
+
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+
+real	0m0,199s
+user	0m1,193s
+sys	0m0,011s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.canneal [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+400000.nets
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal 8 15000 2000 400000.nets 128':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Threadcount: 8
+15000 swaps per temperature step
+start temperature: 2000
+netlist filename: 400000.nets
+number of temperature steps: 128
+locs created
+locs assigned
+Just saw element: 100000
+Just saw element: 200000
+Just saw element: 300000
+Just saw element: 400000
+netlist created. 400000 elements.
+Final routing is: 6.90101e+08
+
+real	0m1,727s
+user	0m2,560s
+sys	0m0,044s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+media.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup -c -p -v -t 8 -i media.dat -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Total input size:                      184.08 MB
+Total output size:                      78.50 MB
+Effective compression factor:            2.35x
+
+Mean data chunk size:                    2.02 KB (stddev: 1053.73 KB)
+Amount of duplicate chunks:             50.84%
+Data size after deduplication:         182.41 MB (compression factor: 1.01x)
+Data size after compression:            76.77 MB (compression factor: 2.38x)
+Output overhead:                         2.19%
+
+real	0m0,857s
+user	0m4,546s
+sys	0m1,025s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.facesim [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+Face_Data/
+Face_Data/Eftychis_840k/
+Face_Data/Eftychis_840k/Front_370k/
+Face_Data/Eftychis_840k/Front_370k/attachment_list.txt
+Face_Data/Eftychis_840k/Front_370k/buccinator_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/buccinator_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/corrugator_supercilii_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/corrugator_supercilii_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/cranium.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/cranium_extended.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/depressor_anguli_oris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_anguli_oris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_labii_inferioris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_labii_inferioris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/face_simulation.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_1.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_128.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_16.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_2.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_3.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_32.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_4.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_6.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_64.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_8.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_original.log
+Face_Data/Eftychis_840k/Front_370k/flesh.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/flesh_extended.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/jaw.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/jaw_joint_parameters
+Face_Data/Eftychis_840k/Front_370k/levator_anguli_oris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_anguli_oris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_labii_superioris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_labii_superioris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_lateral_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_lateral_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_medial_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_medial_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/mentalis_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/mentalis_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/muscle_list.txt
+Face_Data/Eftychis_840k/Front_370k/nasalis_alar_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/nasalis_alar_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/nasalis_transverse.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/node_divisions_1.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_128.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_16.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_2.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_3.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_32.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_4.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_6.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_64.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_8.dat
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oculi_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oculi_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oris.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/particle_positions_1.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_128.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_16.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_2.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_3.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_32.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_4.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_6.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_64.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_8.dat
+Face_Data/Eftychis_840k/Front_370k/peak_isometric_stress_list.txt
+Face_Data/Eftychis_840k/Front_370k/procerus_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/procerus_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/risorius_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/risorius_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_major_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_major_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_minor_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_minor_right.constitutive_data
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.phi
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.rgd
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.tri
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.phi
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.rgd
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.tri
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.phi
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.rgd
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.tri
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.phi
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.rgd
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.tri
+Face_Data/Motion_Data/
+Face_Data/Motion_Data/Storytelling_Controls/
+Face_Data/Motion_Data/Storytelling_Controls/storytelling_controls.1
+Face_Data/Motion_Data/Storytelling_Controls/storytelling_controls.2
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/inst/amd64-linux.gcc/bin/facesim -timing -threads 8':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+/home/alberto/Documentos/TFG/PARSEC/bin/parsecmgmt: línea 1190: 41322 Violación de segmento  (`core' generado) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/inst/amd64-linux.gcc/bin/facesim -timing -threads 8
+
+real	0m0,077s
+user	0m0,000s
+sys	0m0,002s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.fluidanimate [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+in_300K.fluid
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin/fluidanimate 8 5 in_300K.fluid out.fluid':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Loading file "in_300K.fluid"...
+Number of cells: 135424
+Grids steps over x, y, z: 0.00282609 0.0028125 0.00282609
+Number of particles: 305809
+Saving file "out.fluid"...
+
+real	0m0,348s
+user	0m1,123s
+sys	0m0,084s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+kosarak_990k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine kosarak_990k.dat 790':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+transaction number is 990002
+1548
+13483
+46649
+131381
+415489
+1239344
+2985564
+5696308
+8709873
+10789491
+10902648
+9011183
+6094236
+3374161
+1530954
+564958
+165173
+36535
+5727
+578
+33
+1
+the data preparation cost 0.132799 seconds, the FPgrowth cost 0.425873 seconds
+
+real	0m0,562s
+user	0m3,109s
+sys	0m0,052s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 8 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 128 16384 16384 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 10 20 128 16384 16384 1000 none output.txt 8
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[Server] 1 clients are connected
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+read 16384 points
+[Client:0]: Sending ...
+[Client:0] send bytes = 8388608
+[Client:0] Send data to server ok!
+Receive Ack from Server
+[0] Data size = 8388608B, time =  0.030345s, BW =  276.441MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   0.03s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.012s               38.43
+         Tx_Link              0.005s               15.61
+         Rx_Link              0.004s               12.29
+           Timer              0.000s                1.04
+          Socket              0.007s               21.49
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+
+real	0m0,584s
+user	0m2,610s
+sys	0m0,073s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+happy_buddha.obj
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/raytrace/inst/amd64-linux.gcc/bin/rtview happy_buddha.obj -automove -nthreads 8 -frames 3 -res 1920 1080':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x560af4a01740
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = happy_buddha.obj;
+   frames = 3;
+ nthreads = 8;
+      res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: happy_buddha.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 543522 vertices
+adding 1087425 triangles
+finalizing geometry
+vertices            543522 (6369.4 KB)
+triangles           1087425 (12743.3 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 0.341442
+done
+sceneAABB =[[[-0.04615,0.049738,-0.047301,0] ],[[0.035226,0.24777,0.034077,0] ]]
+Rendering 3 frames... 
+-> starting 8 threads...done
+Done

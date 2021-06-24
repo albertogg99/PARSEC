@@ -1,0 +1,487 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on mié 31 mar 2021 18:09:54 CEST.
+[PARSEC] Packages to build:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.dedup parsec.facesim parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Building package parsec.blackscholes [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.blackscholes ----------]
+[PARSEC] parsec.blackscholes does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.blackscholes ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.blackscholes.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+rm -f blackscholes blackscholes.m4.cpp
+/usr/bin/m4 ./c.m4.pthreads blackscholes.c > blackscholes.m4.cpp
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -pthread -DENABLE_THREADS -DNCO=4   blackscholes.m4.cpp -L/usr/lib64 -L/usr/lib  -o blackscholes
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin
+cp -f blackscholes /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] parsec.bodytrack does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.bodytrack ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/configure --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc':
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... mawk
+checking whether /usr/bin/make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for style of include used by /usr/bin/make... GNU
+checking for gcc... /usr/bin/gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking dependency style of /usr/bin/gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether /usr/bin/g++ -std=c++17 accepts -g... yes
+checking dependency style of /usr/bin/g++ -std=c++17... gcc3
+checking how to run the C++ preprocessor... /usr/bin/g++ -std=c++17 -E
+checking for g77... no
+checking for f77... no
+checking for xlf... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for f90... no
+checking for xlf90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for f95... no
+checking for fort... no
+checking for xlf95... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for objdir... .libs
+checking for ar... /usr/bin/ar
+checking for ranlib... /usr/bin/ranlib
+checking for strip... /usr/bin/strip
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC
+checking if /usr/bin/gcc PIC flag -fPIC works... yes
+checking if /usr/bin/gcc static flag -static works... no
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by /usr/bin/g++ -std=c++17... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the /usr/bin/g++ -std=c++17 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /usr/bin/g++ -std=c++17 option to produce PIC... -fPIC
+checking if /usr/bin/g++ -std=c++17 PIC flag -fPIC works... yes
+checking if /usr/bin/g++ -std=c++17 static flag -static works... no
+checking if /usr/bin/g++ -std=c++17 supports -c -o file.o... yes
+checking whether the /usr/bin/g++ -std=c++17 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /usr/bin/g++ -std=c++17 accepts -g... (cached) yes
+checking dependency style of /usr/bin/g++ -std=c++17... (cached) gcc3
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/make sets $(MAKE)... (cached) yes
+checking for main in -lpthread... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for stdint.h... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for memset... yes
+checking for sqrt... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating FlexImageLib/Makefile
+config.status: creating TrackingBenchmark/Makefile
+config.status: creating TrackingBenchmark/threads/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make':
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+Making all in FlexImageLib
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+if /bin/bash ../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I..     -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF ".deps/FlexImage.Tpo" -c -o FlexImage.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp; \
+then mv -f ".deps/FlexImage.Tpo" ".deps/FlexImage.Plo"; else rm -f ".deps/FlexImage.Tpo"; exit 1; fi
+mkdir .libs
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF .deps/FlexImage.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp  -fPIC -DPIC -o .libs/FlexImage.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexImage.lo -MD -MP -MF .deps/FlexImage.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexImage.cpp -o FlexImage.o >/dev/null 2>&1
+if /bin/bash ../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I..     -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF ".deps/FlexIO.Tpo" -c -o FlexIO.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp; \
+then mv -f ".deps/FlexIO.Tpo" ".deps/FlexIO.Plo"; else rm -f ".deps/FlexIO.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF .deps/FlexIO.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp  -fPIC -DPIC -o .libs/FlexIO.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib -I.. -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT FlexIO.lo -MD -MP -MF .deps/FlexIO.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/FlexImageLib/FlexIO.cpp -o FlexIO.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX --mode=link /usr/bin/g++ -std=c++17  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o libflex.la   FlexImage.lo FlexIO.lo  -lpthread 
+/usr/bin/ar cru .libs/libflex.a .libs/FlexImage.o .libs/FlexIO.o
+/usr/bin/ranlib .libs/libflex.a
+creating libflex.la
+(cd .libs && rm -f libflex.la && ln -s ../libflex.la libflex.la)
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+Making all in TrackingBenchmark
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+Making all in threads
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF ".deps/Thread.Tpo" -c -o Thread.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp; \
+then mv -f ".deps/Thread.Tpo" ".deps/Thread.Plo"; else rm -f ".deps/Thread.Tpo"; exit 1; fi
+mkdir .libs
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF .deps/Thread.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp  -fPIC -DPIC -o .libs/Thread.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Thread.lo -MD -MP -MF .deps/Thread.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Thread.cpp -o Thread.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF ".deps/ThreadGroup.Tpo" -c -o ThreadGroup.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp; \
+then mv -f ".deps/ThreadGroup.Tpo" ".deps/ThreadGroup.Plo"; else rm -f ".deps/ThreadGroup.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF .deps/ThreadGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp  -fPIC -DPIC -o .libs/ThreadGroup.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ThreadGroup.lo -MD -MP -MF .deps/ThreadGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/ThreadGroup.cpp -o ThreadGroup.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF ".deps/WorkerGroup.Tpo" -c -o WorkerGroup.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp; \
+then mv -f ".deps/WorkerGroup.Tpo" ".deps/WorkerGroup.Plo"; else rm -f ".deps/WorkerGroup.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF .deps/WorkerGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp  -fPIC -DPIC -o .libs/WorkerGroup.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT WorkerGroup.lo -MD -MP -MF .deps/WorkerGroup.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/WorkerGroup.cpp -o WorkerGroup.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF ".deps/Mutex.Tpo" -c -o Mutex.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp; \
+then mv -f ".deps/Mutex.Tpo" ".deps/Mutex.Plo"; else rm -f ".deps/Mutex.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF .deps/Mutex.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp  -fPIC -DPIC -o .libs/Mutex.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Mutex.lo -MD -MP -MF .deps/Mutex.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Mutex.cpp -o Mutex.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF ".deps/Condition.Tpo" -c -o Condition.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp; \
+then mv -f ".deps/Condition.Tpo" ".deps/Condition.Plo"; else rm -f ".deps/Condition.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF .deps/Condition.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp  -fPIC -DPIC -o .libs/Condition.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Condition.lo -MD -MP -MF .deps/Condition.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Condition.cpp -o Condition.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF ".deps/Barrier.Tpo" -c -o Barrier.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp; \
+then mv -f ".deps/Barrier.Tpo" ".deps/Barrier.Plo"; else rm -f ".deps/Barrier.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF .deps/Barrier.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp  -fPIC -DPIC -o .libs/Barrier.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT Barrier.lo -MD -MP -MF .deps/Barrier.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/Barrier.cpp -o Barrier.o >/dev/null 2>&1
+if /bin/bash ../../libtool --tag=CXX --mode=compile /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../..  -pthread   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF ".deps/RWLock.Tpo" -c -o RWLock.lo /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp; \
+then mv -f ".deps/RWLock.Tpo" ".deps/RWLock.Plo"; else rm -f ".deps/RWLock.Tpo"; exit 1; fi
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF .deps/RWLock.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp  -fPIC -DPIC -o .libs/RWLock.o
+ /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads -I../.. -pthread -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RWLock.lo -MD -MP -MF .deps/RWLock.Tpo -c /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/threads/RWLock.cpp -o RWLock.o >/dev/null 2>&1
+/bin/bash ../../libtool --tag=CXX --mode=link /usr/bin/g++ -std=c++17  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o libthreads.la   Thread.lo ThreadGroup.lo WorkerGroup.lo Mutex.lo Condition.lo Barrier.lo RWLock.lo  -lpthread 
+/usr/bin/ar cru .libs/libthreads.a .libs/Thread.o .libs/ThreadGroup.o .libs/WorkerGroup.o .libs/Mutex.o .libs/Condition.o .libs/Barrier.o .libs/RWLock.o
+/usr/bin/ranlib .libs/libthreads.a
+creating libthreads.la
+(cd .libs && rm -f libthreads.la && ln -s ../libthreads.la libthreads.la)
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT AnnealingFactor.o -MD -MP -MF ".deps/AnnealingFactor.Tpo" -c -o AnnealingFactor.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/AnnealingFactor.cpp; \
+then mv -f ".deps/AnnealingFactor.Tpo" ".deps/AnnealingFactor.Po"; else rm -f ".deps/AnnealingFactor.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT BodyGeometry.o -MD -MP -MF ".deps/BodyGeometry.Tpo" -c -o BodyGeometry.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/BodyGeometry.cpp; \
+then mv -f ".deps/BodyGeometry.Tpo" ".deps/BodyGeometry.Po"; else rm -f ".deps/BodyGeometry.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT BodyPose.o -MD -MP -MF ".deps/BodyPose.Tpo" -c -o BodyPose.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/BodyPose.cpp; \
+then mv -f ".deps/BodyPose.Tpo" ".deps/BodyPose.Po"; else rm -f ".deps/BodyPose.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT CameraModel.o -MD -MP -MF ".deps/CameraModel.Tpo" -c -o CameraModel.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/CameraModel.cpp; \
+then mv -f ".deps/CameraModel.Tpo" ".deps/CameraModel.Po"; else rm -f ".deps/CameraModel.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT CovarianceMatrix.o -MD -MP -MF ".deps/CovarianceMatrix.Tpo" -c -o CovarianceMatrix.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/CovarianceMatrix.cpp; \
+then mv -f ".deps/CovarianceMatrix.Tpo" ".deps/CovarianceMatrix.Po"; else rm -f ".deps/CovarianceMatrix.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ImageMeasurements.o -MD -MP -MF ".deps/ImageMeasurements.Tpo" -c -o ImageMeasurements.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/ImageMeasurements.cpp; \
+then mv -f ".deps/ImageMeasurements.Tpo" ".deps/ImageMeasurements.Po"; else rm -f ".deps/ImageMeasurements.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT ImageProjection.o -MD -MP -MF ".deps/ImageProjection.Tpo" -c -o ImageProjection.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/ImageProjection.cpp; \
+then mv -f ".deps/ImageProjection.Tpo" ".deps/ImageProjection.Po"; else rm -f ".deps/ImageProjection.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT RandomGenerator.o -MD -MP -MF ".deps/RandomGenerator.Tpo" -c -o RandomGenerator.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/RandomGenerator.cpp; \
+then mv -f ".deps/RandomGenerator.Tpo" ".deps/RandomGenerator.Po"; else rm -f ".deps/RandomGenerator.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT TrackingModel.o -MD -MP -MF ".deps/TrackingModel.Tpo" -c -o TrackingModel.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/TrackingModel.cpp; \
+then mv -f ".deps/TrackingModel.Tpo" ".deps/TrackingModel.Po"; else rm -f ".deps/TrackingModel.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/main.cpp; \
+then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT TrackingModelPthread.o -MD -MP -MF ".deps/TrackingModelPthread.Tpo" -c -o TrackingModelPthread.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/TrackingModelPthread.cpp; \
+then mv -f ".deps/TrackingModelPthread.Tpo" ".deps/TrackingModelPthread.Po"; else rm -f ".deps/TrackingModelPthread.Tpo"; exit 1; fi
+if /usr/bin/g++ -std=c++17 -DHAVE_CONFIG_H -I. -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark -I..  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/../FlexImageLib   -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -MT AsyncIO.o -MD -MP -MF ".deps/AsyncIO.Tpo" -c -o AsyncIO.o /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/src/TrackingBenchmark/AsyncIO.cpp; \
+then mv -f ".deps/AsyncIO.Tpo" ".deps/AsyncIO.Po"; else rm -f ".deps/AsyncIO.Tpo"; exit 1; fi
+/bin/bash ../libtool --tag=CXX --mode=link /usr/bin/g++ -std=c++17  -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas  -L/usr/lib64 -L/usr/lib -o bodytrack  AnnealingFactor.o BodyGeometry.o BodyPose.o CameraModel.o CovarianceMatrix.o ImageMeasurements.o ImageProjection.o RandomGenerator.o TrackingModel.o main.o  TrackingModelPthread.o AsyncIO.o  ../FlexImageLib/libflex.la -lm threads/libthreads.la  -lpthread 
+mkdir .libs
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both -Wl,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -Wall -Wno-unknown-pragmas -o bodytrack AnnealingFactor.o BodyGeometry.o BodyPose.o CameraModel.o CovarianceMatrix.o ImageMeasurements.o ImageProjection.o RandomGenerator.o TrackingModel.o main.o TrackingModelPthread.o AsyncIO.o  -L/usr/lib64 -L/usr/lib ../FlexImageLib/.libs/libflex.a -lm threads/.libs/libthreads.a -lpthread  
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make install':
+Making install in FlexImageLib
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/FlexImageLib'
+Making install in TrackingBenchmark
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+Making install in threads
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark/threads'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[3]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+test -z "/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin" || mkdir -p -- "/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin"
+  /bin/bash ../libtool --mode=install /home/alberto/Documentos/TFG/PARSEC/bin/install -c 'bodytrack' '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack'
+/home/alberto/Documentos/TFG/PARSEC/bin/install -c bodytrack /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/inst/amd64-linux.gcc/bin/bodytrack
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc/TrackingBenchmark'
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/bodytrack/obj/amd64-linux.gcc'
+
+[PARSEC] [========== Building package parsec.canneal [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.canneal ----------]
+[PARSEC] parsec.canneal does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.canneal ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.canneal.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread annealer_thread.cpp -c -o annealer_thread.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread rng.cpp -c -o rng.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist.cpp -c -o netlist.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread main.cpp -c -o main.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread netlist_elem.cpp -c -o netlist_elem.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread -L/usr/lib64 -L/usr/lib *.o  -lm -o canneal
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin
+cp -f canneal /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/canneal/inst/amd64-linux.gcc/bin/canneal
+
+[PARSEC] [========== Building package parsec.dedup [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.dedup ----------]
+[PARSEC] parsec.dedup depends on: ssl zlib
+[PARSEC] [---------- Analyzing package parsec.ssl ----------]
+[PARSEC] Package parsec.ssl already exists, proceeding.
+[PARSEC] [---------- Analyzing package parsec.zlib ----------]
+[PARSEC] Package parsec.zlib already exists, proceeding.
+[PARSEC] [---------- Building package parsec.dedup ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.dedup.
+[PARSEC] Running 'env version=pthreads CFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include  -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make':
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread hashtable.c -o hashtable.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread util.c -o util.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread dedup.c -o dedup.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread rabin.c -o rabin.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread encoder.c -o encoder.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread decoder.c -o decoder.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread mbuffer.c -o mbuffer.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread sha.c -o sha.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread queue.c -o queue.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread binheap.c -o binheap.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread tree.c -o tree.o
+/usr/bin/gcc -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib -o dedup hashtable.o util.o dedup.o rabin.o encoder.o decoder.o mbuffer.o sha.o queue.o binheap.o tree.o  -lm -lz
+[PARSEC] Running 'env version=pthreads CFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include  -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin
+cp -f dedup /home/alberto/Documentos/TFG/PARSEC/pkgs/kernels/dedup/inst/amd64-linux.gcc/bin/dedup
+
+[PARSEC] [========== Building package parsec.facesim [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.facesim ----------]
+[PARSEC] parsec.facesim does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.facesim ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.facesim.
+[PARSEC] Running 'env version=pthreads PHYSBAM=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make':
+/usr/bin/make -C TaskQ/lib all
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/lib'
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	 -DTASKQ_DIST_FIXED -c taskQDistCommon.c
+mv taskQDistCommon.o taskQ.o
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/lib'
+/usr/bin/make -C Benchmarks/facesim
+make[1]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Benchmarks/facesim'
+Generating LANDMARK_PROXIMITY_OPTIMIZATION.d
+Generating FACE_OPTIMIZATION.d
+Generating FACE_LANDMARK_OPTIMIZATION_GOAL.d
+Generating FACE_DRIVER.d
+Generating main.d
+cd /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library && /usr/bin/make -f Makefile.PhysBAM
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library'
+Generating Utilities/TIMER.d
+Generating Utilities/STRING_UTILITIES.d
+Generating Utilities/PARSE_ARGS.d
+Generating Utilities/LOG_ENTRY.d
+Generating Utilities/LOG.d
+Generating Utilities/DEBUG_UTILITIES.d
+Generating Thread_Utilities/THREAD_ARRAY_LOCK.d
+Generating Thread_Utilities/THREAD_POOL_SINGLE.d
+Generating Thread_Utilities/THREAD_POOL.d
+Generating Thread_Utilities/THREAD_POOL_ALAMERE.d
+Generating Thread_Utilities/THREAD_DIVISION_PARAMETERS.d
+Generating Solids_And_Fluids/SOLIDS_PARAMETERS_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_EXAMPLE_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER_3D.d
+Generating Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER.d
+Generating Solids_And_Fluids/SOLIDS_EVOLUTION_3D.d
+Generating Rigid_Bodies/RIGID_BODY_LIST_3D.d
+Generating Rigid_Bodies/RIGID_BODY_INTERSECTIONS_3D.d
+Generating Rigid_Bodies/RIGID_BODY_EVOLUTION_3D.d
+Generating Rigid_Bodies/RIGID_BODY_COLLISIONS_3D.d
+Generating Rigid_Bodies/RIGID_BODY_3D.d
+Generating Rigid_Bodies/MASS_PROPERTIES_3D.d
+Generating Read_Write/FILE_UTILITIES.d
+Generating Particles/SOLIDS_PARTICLE.d
+Generating Particles/PARTICLE.d
+Generating Matrices_And_Vectors/VECTOR_ND_PARALLEL.d
+Generating Matrices_And_Vectors/SYMMETRIC_MATRIX_3X3.d
+Generating Matrices_And_Vectors/MATRIX_3X3.d
+Generating Level_Sets/LEVELSET_3D.d
+Generating Level_Sets/LEVELSET.d
+Generating Grids/TRIANGLE_MESH.d
+Generating Grids/TETRAHEDRON_MESH.d
+Generating Grids/SEGMENT_MESH.d
+Generating Geometry/TRIANGULATED_SURFACE_LIST.d
+Generating Geometry/TRIANGULATED_SURFACE.d
+Generating Geometry/TRIANGULATED_OBJECT.d
+Generating Geometry/TRIANGLE_3D.d
+Generating Geometry/TETRAHEDRON.d
+Generating Geometry/TETRAHEDRALIZED_VOLUME_LIST.d
+Generating Geometry/TETRAHEDRALIZED_VOLUME.d
+Generating Geometry/SEGMENTED_CURVE_3D.d
+Generating Geometry/SEGMENT_3D.d
+Generating Geometry/SEGMENT_2D.d
+Generating Geometry/PLANE.d
+Generating Geometry/IMPLICIT_SURFACE_LIST.d
+Generating Geometry/IMPLICIT_SURFACE.d
+Generating Geometry/EMBEDDED_TETRAHEDRALIZED_VOLUME.d
+Generating Geometry/EMBEDDED_OBJECT.d
+Generating Geometry/BOX_3D.d
+Generating Geometry/BOX_2D.d
+Generating Forces_And_Torques/DIAGONALIZED_FINITE_VOLUME_3D.d
+Generating Forces_And_Torques/BODY_FORCES_3D.d
+Generating Fracture/EMBEDDED_TETRAHEDRALIZED_VOLUME_BOUNDARY_SURFACE.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT_COLLISIONS_3D.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT_3D.d
+Generating Deformable_Objects/DEFORMABLE_OBJECT.d
+Generating Data_Structures/SPLAY_TREE.d
+Generating Constitutive_Models/STRAIN_MEASURE_3D.d
+Generating Collisions_And_Interactions/TETRAHEDRON_HIERARCHY.d
+Generating Collisions_And_Interactions/TETRAHEDRON_COLLISION_BODY.d
+Generating Collisions_And_Interactions/COLLISION_BODY_LIST_3D.d
+Generating Collisions_And_Interactions/BOX_HIERARCHY.d
+Generating Arrays/ARRAY_PARALLEL_OPERATIONS.d
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Arrays/ARRAY_PARALLEL_OPERATIONS.o Arrays/ARRAY_PARALLEL_OPERATIONS.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Collisions_And_Interactions/BOX_HIERARCHY.o Collisions_And_Interactions/BOX_HIERARCHY.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Collisions_And_Interactions/COLLISION_BODY_LIST_3D.o Collisions_And_Interactions/COLLISION_BODY_LIST_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Collisions_And_Interactions/TETRAHEDRON_COLLISION_BODY.o Collisions_And_Interactions/TETRAHEDRON_COLLISION_BODY.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Collisions_And_Interactions/TETRAHEDRON_HIERARCHY.o Collisions_And_Interactions/TETRAHEDRON_HIERARCHY.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Constitutive_Models/STRAIN_MEASURE_3D.o Constitutive_Models/STRAIN_MEASURE_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Data_Structures/SPLAY_TREE.o Data_Structures/SPLAY_TREE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Deformable_Objects/DEFORMABLE_OBJECT.o Deformable_Objects/DEFORMABLE_OBJECT.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Deformable_Objects/DEFORMABLE_OBJECT_3D.o Deformable_Objects/DEFORMABLE_OBJECT_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Deformable_Objects/DEFORMABLE_OBJECT_COLLISIONS_3D.o Deformable_Objects/DEFORMABLE_OBJECT_COLLISIONS_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Fracture/EMBEDDED_TETRAHEDRALIZED_VOLUME_BOUNDARY_SURFACE.o Fracture/EMBEDDED_TETRAHEDRALIZED_VOLUME_BOUNDARY_SURFACE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Forces_And_Torques/BODY_FORCES_3D.o Forces_And_Torques/BODY_FORCES_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Forces_And_Torques/DIAGONALIZED_FINITE_VOLUME_3D.o Forces_And_Torques/DIAGONALIZED_FINITE_VOLUME_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/BOX_2D.o Geometry/BOX_2D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/BOX_3D.o Geometry/BOX_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/EMBEDDED_OBJECT.o Geometry/EMBEDDED_OBJECT.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/EMBEDDED_TETRAHEDRALIZED_VOLUME.o Geometry/EMBEDDED_TETRAHEDRALIZED_VOLUME.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/IMPLICIT_SURFACE.o Geometry/IMPLICIT_SURFACE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/IMPLICIT_SURFACE_LIST.o Geometry/IMPLICIT_SURFACE_LIST.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/PLANE.o Geometry/PLANE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/SEGMENT_2D.o Geometry/SEGMENT_2D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/SEGMENT_3D.o Geometry/SEGMENT_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/SEGMENTED_CURVE_3D.o Geometry/SEGMENTED_CURVE_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TETRAHEDRALIZED_VOLUME.o Geometry/TETRAHEDRALIZED_VOLUME.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TETRAHEDRALIZED_VOLUME_LIST.o Geometry/TETRAHEDRALIZED_VOLUME_LIST.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TETRAHEDRON.o Geometry/TETRAHEDRON.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TRIANGLE_3D.o Geometry/TRIANGLE_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TRIANGULATED_OBJECT.o Geometry/TRIANGULATED_OBJECT.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TRIANGULATED_SURFACE.o Geometry/TRIANGULATED_SURFACE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Geometry/TRIANGULATED_SURFACE_LIST.o Geometry/TRIANGULATED_SURFACE_LIST.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Grids/SEGMENT_MESH.o Grids/SEGMENT_MESH.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Grids/TETRAHEDRON_MESH.o Grids/TETRAHEDRON_MESH.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Grids/TRIANGLE_MESH.o Grids/TRIANGLE_MESH.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Level_Sets/LEVELSET.o Level_Sets/LEVELSET.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Level_Sets/LEVELSET_3D.o Level_Sets/LEVELSET_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Matrices_And_Vectors/MATRIX_3X3.o Matrices_And_Vectors/MATRIX_3X3.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Matrices_And_Vectors/SYMMETRIC_MATRIX_3X3.o Matrices_And_Vectors/SYMMETRIC_MATRIX_3X3.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Matrices_And_Vectors/VECTOR_ND_PARALLEL.o Matrices_And_Vectors/VECTOR_ND_PARALLEL.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Particles/PARTICLE.o Particles/PARTICLE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Particles/SOLIDS_PARTICLE.o Particles/SOLIDS_PARTICLE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Read_Write/FILE_UTILITIES.o Read_Write/FILE_UTILITIES.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/MASS_PROPERTIES_3D.o Rigid_Bodies/MASS_PROPERTIES_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/RIGID_BODY_3D.o Rigid_Bodies/RIGID_BODY_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/RIGID_BODY_COLLISIONS_3D.o Rigid_Bodies/RIGID_BODY_COLLISIONS_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/RIGID_BODY_EVOLUTION_3D.o Rigid_Bodies/RIGID_BODY_EVOLUTION_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/RIGID_BODY_INTERSECTIONS_3D.o Rigid_Bodies/RIGID_BODY_INTERSECTIONS_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Rigid_Bodies/RIGID_BODY_LIST_3D.o Rigid_Bodies/RIGID_BODY_LIST_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Solids_And_Fluids/SOLIDS_EVOLUTION_3D.o Solids_And_Fluids/SOLIDS_EVOLUTION_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER.o Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER_3D.o Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Solids_And_Fluids/SOLIDS_FLUIDS_EXAMPLE_3D.o Solids_And_Fluids/SOLIDS_FLUIDS_EXAMPLE_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Solids_And_Fluids/SOLIDS_PARAMETERS_3D.o Solids_And_Fluids/SOLIDS_PARAMETERS_3D.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Thread_Utilities/THREAD_DIVISION_PARAMETERS.o Thread_Utilities/THREAD_DIVISION_PARAMETERS.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Thread_Utilities/THREAD_POOL_ALAMERE.o Thread_Utilities/THREAD_POOL_ALAMERE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Thread_Utilities/THREAD_POOL.o Thread_Utilities/THREAD_POOL.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Thread_Utilities/THREAD_POOL_SINGLE.o Thread_Utilities/THREAD_POOL_SINGLE.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Thread_Utilities/THREAD_ARRAY_LOCK.o Thread_Utilities/THREAD_ARRAY_LOCK.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/DEBUG_UTILITIES.o Utilities/DEBUG_UTILITIES.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/LOG.o Utilities/LOG.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/LOG_ENTRY.o Utilities/LOG_ENTRY.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/PARSE_ARGS.o Utilities/PARSE_ARGS.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/STRING_UTILITIES.o Utilities/STRING_UTILITIES.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/Utilities/TIMER.o Utilities/TIMER.cpp
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/lib
+rm -f /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/lib/libPhysBAM.a
+/usr/bin/ar -r /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/lib/libPhysBAM.a obj/Arrays/ARRAY_PARALLEL_OPERATIONS.o obj/Collisions_And_Interactions/BOX_HIERARCHY.o obj/Collisions_And_Interactions/COLLISION_BODY_LIST_3D.o obj/Collisions_And_Interactions/TETRAHEDRON_COLLISION_BODY.o obj/Collisions_And_Interactions/TETRAHEDRON_HIERARCHY.o obj/Constitutive_Models/STRAIN_MEASURE_3D.o obj/Data_Structures/SPLAY_TREE.o obj/Deformable_Objects/DEFORMABLE_OBJECT.o obj/Deformable_Objects/DEFORMABLE_OBJECT_3D.o obj/Deformable_Objects/DEFORMABLE_OBJECT_COLLISIONS_3D.o obj/Fracture/EMBEDDED_TETRAHEDRALIZED_VOLUME_BOUNDARY_SURFACE.o obj/Forces_And_Torques/BODY_FORCES_3D.o obj/Forces_And_Torques/DIAGONALIZED_FINITE_VOLUME_3D.o obj/Geometry/BOX_2D.o obj/Geometry/BOX_3D.o obj/Geometry/EMBEDDED_OBJECT.o obj/Geometry/EMBEDDED_TETRAHEDRALIZED_VOLUME.o obj/Geometry/IMPLICIT_SURFACE.o obj/Geometry/IMPLICIT_SURFACE_LIST.o obj/Geometry/PLANE.o obj/Geometry/SEGMENT_2D.o obj/Geometry/SEGMENT_3D.o obj/Geometry/SEGMENTED_CURVE_3D.o obj/Geometry/TETRAHEDRALIZED_VOLUME.o obj/Geometry/TETRAHEDRALIZED_VOLUME_LIST.o obj/Geometry/TETRAHEDRON.o obj/Geometry/TRIANGLE_3D.o obj/Geometry/TRIANGULATED_OBJECT.o obj/Geometry/TRIANGULATED_SURFACE.o obj/Geometry/TRIANGULATED_SURFACE_LIST.o obj/Grids/SEGMENT_MESH.o obj/Grids/TETRAHEDRON_MESH.o obj/Grids/TRIANGLE_MESH.o obj/Level_Sets/LEVELSET.o obj/Level_Sets/LEVELSET_3D.o obj/Matrices_And_Vectors/MATRIX_3X3.o obj/Matrices_And_Vectors/SYMMETRIC_MATRIX_3X3.o obj/Matrices_And_Vectors/VECTOR_ND_PARALLEL.o obj/Particles/PARTICLE.o obj/Particles/SOLIDS_PARTICLE.o obj/Read_Write/FILE_UTILITIES.o obj/Rigid_Bodies/MASS_PROPERTIES_3D.o obj/Rigid_Bodies/RIGID_BODY_3D.o obj/Rigid_Bodies/RIGID_BODY_COLLISIONS_3D.o obj/Rigid_Bodies/RIGID_BODY_EVOLUTION_3D.o obj/Rigid_Bodies/RIGID_BODY_INTERSECTIONS_3D.o obj/Rigid_Bodies/RIGID_BODY_LIST_3D.o obj/Solids_And_Fluids/SOLIDS_EVOLUTION_3D.o obj/Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER.o obj/Solids_And_Fluids/SOLIDS_FLUIDS_DRIVER_3D.o obj/Solids_And_Fluids/SOLIDS_FLUIDS_EXAMPLE_3D.o obj/Solids_And_Fluids/SOLIDS_PARAMETERS_3D.o obj/Thread_Utilities/THREAD_DIVISION_PARAMETERS.o obj/Thread_Utilities/THREAD_POOL_ALAMERE.o obj/Thread_Utilities/THREAD_POOL.o obj/Thread_Utilities/THREAD_POOL_SINGLE.o obj/Thread_Utilities/THREAD_ARRAY_LOCK.o obj/Utilities/DEBUG_UTILITIES.o obj/Utilities/LOG.o obj/Utilities/LOG_ENTRY.o obj/Utilities/PARSE_ARGS.o obj/Utilities/STRING_UTILITIES.o obj/Utilities/TIMER.o
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library'
+cd /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library && /usr/bin/make -f Makefile.PhysBAM
+make[2]: Entering directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library'
+make[2]: Nothing to be done for 'default'.
+make[2]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Public_Library'
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/main.o main.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/FACE_DRIVER.o FACE_DRIVER.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/FACE_LANDMARK_OPTIMIZATION_GOAL.o FACE_LANDMARK_OPTIMIZATION_GOAL.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/FACE_OPTIMIZATION.o FACE_OPTIMIZATION.cpp
+/usr/bin/g++ -std=c++17 -c -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions -DENABLE_PTHREADS	  -I/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/include -DUSE_ALAMERE_TASKQ -w  -DNDEBUG -o obj/LANDMARK_PROXIMITY_OPTIMIZATION.o LANDMARK_PROXIMITY_OPTIMIZATION.cpp
+/usr/bin/g++ -std=c++17 -Wl,-o,facesim obj/main.o obj/FACE_DRIVER.o obj/FACE_LANDMARK_OPTIMIZATION_GOAL.o obj/FACE_OPTIMIZATION.o obj/LANDMARK_PROXIMITY_OPTIMIZATION.o -lPhysBAM  /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/TaskQ/lib/taskQ.o  -pthread -xW -lm -L/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib 
+make[1]: Leaving directory '/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc/Benchmarks/facesim'
+[PARSEC] Error: 'env version=pthreads PHYSBAM=/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/facesim/obj/amd64-linux.gcc CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make' failed.

@@ -1,0 +1,92 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on jue 08 abr 2021 10:36:33 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 test':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 1 10 10 1 &
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 2 5 1 10 10 5 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+=================================================================
+==7290==ERROR: AddressSanitizer: heap-use-after-free on address 0x604000000010 at pc 0x7f1b642505ce bp 0x7f1b5c5f5b10 sp 0x7f1b5c5f52b8
+WRITE of size 40 at 0x604000000010 thread T5
+    #0 0x7f1b642505cd in __interceptor_memcpy (/lib/x86_64-linux-gnu/libasan.so.6+0x3a5cd)
+    #1 0x563dc663c375 in copyout (/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server+0x36375)
+    #2 0x563dc6637164 in uiomove /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.netinet/kern_subr.c:172
+    #3 0x563dc6651a21 in soreceive_generic /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.netinet/uipc_socket.c:1748
+    #4 0x563dc6623cfc in kern_recvit /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.kern/uipc_syscalls.c:1321
+    #5 0x563dc6624099 in recvit /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.kern/uipc_syscalls.c:1435
+    #6 0x563dc6624099 in bsd_syscall_recv /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/freebsd.kern/uipc_syscalls.c:1506
+    #7 0x563dc661e7d3 in uptcp_recv /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/lib/uptcp_api.c:466
+    #8 0x563dc660f984 in receive_from_client(void*) /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:1922
+    #9 0x7f1b641fc608 in start_thread /build/glibc-eX1tMB/glibc-2.31/nptl/pthread_create.c:477
+    #10 0x7f1b63df3292 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x122292)
+
+0x604000000010 is located 0 bytes inside of 40-byte region [0x604000000010,0x604000000038)
+freed by thread T0 here:
+    #0 0x7f1b642c8f7f in operator delete(void*, unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2f7f)
+    #1 0x563dc661bc03 in std::vector<float, std::allocator<float> >::~vector() /usr/include/c++/10/ext/new_allocator.h:133
+    #2 0x563dc661bc03 in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2134
+
+previously allocated by thread T0 here:
+    #0 0x7f1b642c7f17 in operator new(unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb1f17)
+    #1 0x563dc661b413 in __gnu_cxx::new_allocator<float>::allocate(unsigned long, void const*) /usr/include/c++/10/ext/new_allocator.h:115
+    #2 0x563dc661b413 in std::allocator_traits<std::allocator<float> >::allocate(std::allocator<float>&, unsigned long) /usr/include/c++/10/bits/alloc_traits.h:460
+    #3 0x563dc661b413 in std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) /usr/include/c++/10/bits/stl_vector.h:346
+    #4 0x563dc661b413 in std::_Vector_base<float, std::allocator<float> >::_M_create_storage(unsigned long) /usr/include/c++/10/bits/stl_vector.h:361
+    #5 0x563dc661b413 in std::_Vector_base<float, std::allocator<float> >::_Vector_base(unsigned long, std::allocator<float> const&) /usr/include/c++/10/bits/stl_vector.h:305
+    #6 0x563dc661b413 in std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) /usr/include/c++/10/bits/stl_vector.h:511
+    #7 0x563dc661b413 in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2134
+
+Thread T5 created by T0 here:
+    #0 0x7f1b6426da95 in __interceptor_pthread_create (/lib/x86_64-linux-gnu/libasan.so.6+0x57a95)
+    #1 0x563dc661ee41 in pthread_create_wrapper /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:181
+
+SUMMARY: AddressSanitizer: heap-use-after-free (/lib/x86_64-linux-gnu/libasan.so.6+0x3a5cd) in __interceptor_memcpy
+Shadow bytes around the buggy address:
+  0x0c087fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c087fff8000: fa fa[fd]fd fd fd fd fa fa fa fd fd fd fd fd fa
+  0x0c087fff8010: fa fa fd fd fd fd fd fa fa fa fd fd fd fd fd fa
+  0x0c087fff8020: fa fa fd fd fd fd fd fa fa fa 00 00 00 00 00 fa
+  0x0c087fff8030: fa fa 00 00 00 00 00 fa fa fa 00 00 00 00 00 fa
+  0x0c087fff8040: fa fa 00 00 00 00 00 fa fa fa 00 00 00 00 00 00
+  0x0c087fff8050: fa fa 00 00 00 00 00 fa fa fa 00 00 00 00 00 fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==7290==ABORTING
+
+real	0m0,031s
+user	0m0,013s
+sys	0m0,009s

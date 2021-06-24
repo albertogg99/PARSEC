@@ -1,0 +1,9 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on lun 15 mar 2021 09:37:10 CET.
+[PARSEC] Packages to build:  parsec.bodytrack
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] Package parsec.bodytrack already exists, proceeding.
+[PARSEC] Done.

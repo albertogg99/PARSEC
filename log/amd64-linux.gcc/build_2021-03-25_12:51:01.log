@@ -1,0 +1,28 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 25 mar 2021 12:51:01 CET.
+[PARSEC] Packages to build:  parsec.swaptions
+
+[PARSEC] [========== Building package parsec.swaptions [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.swaptions ----------]
+[PARSEC] parsec.swaptions depends on: tbblib
+[PARSEC] [---------- Analyzing package parsec.tbblib ----------]
+[PARSEC] Package parsec.tbblib already exists, proceeding.
+[PARSEC] [---------- Building package parsec.swaptions ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.swaptions.
+[PARSEC] Running 'env version=tbb /usr/bin/make':
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c CumNormalInv.cpp -o CumNormalInv.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c MaxFunction.cpp -o MaxFunction.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c RanUnif.cpp -o RanUnif.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c nr_routines.c -o nr_routines.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c icdf.cpp -o icdf.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c HJM_SimPath_Forward_Blocking.cpp -o HJM_SimPath_Forward_Blocking.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c HJM.cpp -o HJM.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c HJM_Swaption_Blocking.cpp -o HJM_Swaption_Blocking.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206  -DENABLE_THREADS -DTBB_VERSION -c HJM_Securities.cpp -o HJM_Securities.o
+/usr/bin/g++ -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -L/usr/lib64 -L/usr/lib  -DENABLE_THREADS -DTBB_VERSION CumNormalInv.o MaxFunction.o RanUnif.o nr_routines.o icdf.o HJM_SimPath_Forward_Blocking.o HJM.o HJM_Swaption_Blocking.o HJM_Securities.o   -ltbb -o swaptions 
+[PARSEC] Running 'env version=tbb /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/inst/amd64-linux.gcc/bin
+cp -f swaptions  /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/swaptions/inst/amd64-linux.gcc/bin/swaptions 
+[PARSEC] Done.

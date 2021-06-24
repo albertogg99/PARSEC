@@ -1,0 +1,15 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 08 abr 2021 11:28:03 CEST.
+[PARSEC] Packages to build:  parsec.freqmine
+
+[PARSEC] [========== Building package parsec.freqmine [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.freqmine ----------]
+[PARSEC] parsec.freqmine does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.freqmine ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.freqmine.
+[PARSEC] Running 'env CXXFLAGS= -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp /usr/bin/make':
+/usr/bin/g++  -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c fpmax.cpp -o fpgrowth.o
+/usr/bin/g++  -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp -Wno-deprecated -O2 -c data.cpp
+[PARSEC] Error: 'env CXXFLAGS= -std=c++17 -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fopenmp /usr/bin/make' failed.

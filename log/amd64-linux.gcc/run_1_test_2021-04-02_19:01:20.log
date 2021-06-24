@@ -1,0 +1,40 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on vie 02 abr 2021 19:01:20 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+T10I4D100K_3.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine T10I4D100K_3.dat 1':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+=================================================================
+==5957==ERROR: AddressSanitizer: attempting free on address which was not malloc()-ed: 0x7ffccb80bb8a in thread T0
+    #0 0x7f08c4b50b87 in operator delete[](void*) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2b87)
+    #1 0x5643f67f830a in MapFileNode::finalize() /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:139
+    #2 0x5643f67f830a in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:125
+    #3 0x5643f680283a in FP_tree::scan1_DB(Data*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:760
+    #4 0x5643f67f6aef in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:151
+    #5 0x7f08c46b00b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #6 0x5643f67f742d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x542d)
+
+Address 0x7ffccb80bb8a is located in stack of thread T0 at offset 2410 in frame
+    #0 0x5643f67f678f in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:105
+
+  This frame has 3 object(s):
+    [32, 40) 'tstart' (line 106)
+    [64, 72) 'tdatap' (line 106)
+    [96, 104) 'tend' (line 106) <== Memory access at offset 2410 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: bad-free (/lib/x86_64-linux-gnu/libasan.so.6+0xb2b87) in operator delete[](void*)
+==5957==ABORTING
+
+real	0m0,019s
+user	0m0,011s
+sys	0m0,004s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

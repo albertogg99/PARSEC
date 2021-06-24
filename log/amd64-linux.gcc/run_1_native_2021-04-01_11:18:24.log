@@ -1,0 +1,29 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on jue 01 abr 2021 11:18:24 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+LeakSanitizer:DEADLYSIGNAL
+==14490==ERROR: LeakSanitizer: SEGV on unknown address 0x7f6882800108 (pc 0x55e8a006d98f bp 0x00000000033d sp 0x7ffdbc4c8ee0 T0)
+==14490==The signal is caused by a READ memory access.
+    #0 0x55e8a006d98f in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:194
+    #1 0x7f68846b00b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #2 0x55e8a006db4d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x2b4d)
+
+LeakSanitizer can not provide additional info.
+SUMMARY: LeakSanitizer: SEGV /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:194 in main
+==14490==ABORTING
+
+real	3m59,905s
+user	3m59,159s
+sys	0m0,712s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

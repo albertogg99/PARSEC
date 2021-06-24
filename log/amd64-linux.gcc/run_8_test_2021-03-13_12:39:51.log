@@ -1,0 +1,23 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input test started on sáb 13 mar 2021 12:39:51 CET.
+[PARSEC] Benchmarks to run:  parsec.blackscholes
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'test'.
+in_4.txt
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes 8 in_4.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+WARNING: Not enough work, reducing number of threads to match number of options.
+Num of Options: 4
+Num of Runs: 100
+Size of data: 160
+
+real	0m0,001s
+user	0m0,001s
+sys	0m0,000s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

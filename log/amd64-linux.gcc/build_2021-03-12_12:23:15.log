@@ -1,0 +1,41 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on vie 12 mar 2021 12:23:15 CET.
+[PARSEC] Packages to build:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.dedup parsec.facesim parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Building package parsec.blackscholes [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.blackscholes ----------]
+[PARSEC] Package parsec.blackscholes already exists, proceeding.
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] Package parsec.bodytrack already exists, proceeding.
+
+[PARSEC] [========== Building package parsec.canneal [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.canneal ----------]
+[PARSEC] Package parsec.canneal already exists, proceeding.
+
+[PARSEC] [========== Building package parsec.dedup [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.dedup ----------]
+[PARSEC] parsec.dedup depends on: ssl zlib
+[PARSEC] [---------- Analyzing package parsec.ssl ----------]
+[PARSEC] Package parsec.ssl already exists, proceeding.
+[PARSEC] [---------- Analyzing package parsec.zlib ----------]
+[PARSEC] Package parsec.zlib already exists, proceeding.
+[PARSEC] [---------- Building package parsec.dedup ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.dedup.
+[PARSEC] Running 'env version=pthreads CFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include  -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make':
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread hashtable.c -o hashtable.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread util.c -o util.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread dedup.c -o dedup.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread rabin.c -o rabin.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread encoder.c -o encoder.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread decoder.c -o decoder.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread mbuffer.c -o mbuffer.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread sha.c -o sha.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread queue.c -o queue.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread binheap.c -o binheap.o
+/usr/bin/gcc -c -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread tree.c -o tree.o
+/usr/bin/gcc -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -Wall -fno-strict-aliasing -D_XOPEN_SOURCE=600 -DENABLE_GZIP_COMPRESSION -DENABLE_PTHREADS -pthread -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib -o dedup hashtable.o util.o dedup.o rabin.o encoder.o decoder.o mbuffer.o sha.o queue.o binheap.o tree.o  -lm -lz
+[PARSEC] Error: 'env version=pthreads CFLAGS=-I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/include -I/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/include  -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/ssl/inst/amd64-linux.gcc/lib -L/home/alberto/Documentos/TFG/PARSEC/pkgs/libs/zlib/inst/amd64-linux.gcc/lib -L/usr/lib64 -L/usr/lib /usr/bin/make' failed.

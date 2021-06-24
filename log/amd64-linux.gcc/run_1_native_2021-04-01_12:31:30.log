@@ -1,0 +1,73 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on jue 01 abr 2021 12:31:30 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+=================================================================
+==44662==ERROR: AddressSanitizer: heap-use-after-free on address 0x7f8d2923c804 at pc 0x557c8dea60b1 bp 0x7ffc26c78770 sp 0x7ffc26c78760
+WRITE of size 4 at 0x7f8d2923c804 thread T0
+    #0 0x557c8dea60b0 in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:84
+    #1 0x557c8deaf6da in FP_tree::scan1_DB(Data*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:760
+    #2 0x557c8dea3aef in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:151
+    #3 0x7f8d2bfdf0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #4 0x557c8dea436d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x536d)
+
+0x7f8d2923c804 is located 4 bytes inside of 400000-byte region [0x7f8d2923c800,0x7f8d2929e280)
+freed by thread T0 here:
+    #0 0x7f8d2c47fb87 in operator delete[](void*) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2b87)
+    #1 0x557c8dea5214 in MapFileNode::finalize() /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:138
+    #2 0x557c8dea5214 in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:124
+
+previously allocated by thread T0 here:
+    #0 0x7f8d2c47f087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x557c8dea49b2 in MapFileNode::init(int, int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:131
+    #2 0x557c8dea49b2 in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:34
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:84 in Data::parseDataFile(MapFile*)
+Shadow bytes around the buggy address:
+  0x0ff22523f8b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ff22523f8c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ff22523f8d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ff22523f8e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ff22523f8f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0ff22523f900:[fd]fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0ff22523f910: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0ff22523f920: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0ff22523f930: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0ff22523f940: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0ff22523f950: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==44662==ABORTING
+
+real	0m0,012s
+user	0m0,008s
+sys	0m0,004s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

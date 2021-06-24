@@ -1,0 +1,163 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on sáb 03 abr 2021 18:10:42 CEST.
+[PARSEC] Packages to build:  parsec.blackscholes parsec.bodytrack parsec.canneal parsec.fluidanimate parsec.freqmine parsec.netstreamcluster parsec.raytrace parsec.streamcluster parsec.swaptions
+
+[PARSEC] [========== Building package parsec.blackscholes [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.blackscholes ----------]
+[PARSEC] parsec.blackscholes does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.blackscholes ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Copying source code of package parsec.blackscholes.
+[PARSEC] Running 'env version=pthreads /usr/bin/make':
+rm -f blackscholes blackscholes.m4.cpp
+/usr/bin/m4 ./c.m4.pthreads blackscholes.c > blackscholes.m4.cpp
+/usr/bin/g++ -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -pthread -DENABLE_THREADS -DNCO=4   blackscholes.m4.cpp -L/usr/lib64 -L/usr/lib  -o blackscholes
+[PARSEC] Running 'env version=pthreads /usr/bin/make install':
+mkdir -p /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin
+cp -f blackscholes /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/blackscholes/inst/amd64-linux.gcc/bin/blackscholes
+
+[PARSEC] [========== Building package parsec.bodytrack [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.bodytrack ----------]
+[PARSEC] parsec.bodytrack does not depend on any other packages.
+[PARSEC] [---------- Building package parsec.bodytrack ----------]
+[PARSEC] Removing old build directory.
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/configure --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc':
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... mawk
+checking whether /usr/bin/make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for style of include used by /usr/bin/make... GNU
+checking for gcc... /usr/bin/gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking dependency style of /usr/bin/gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether /usr/bin/g++ accepts -g... yes
+checking dependency style of /usr/bin/g++... gcc3
+checking how to run the C++ preprocessor... /usr/bin/g++ -E
+checking for g77... no
+checking for f77... no
+checking for xlf... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for f90... no
+checking for xlf90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for f95... no
+checking for fort... no
+checking for xlf95... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for objdir... .libs
+checking for ar... /usr/bin/ar
+checking for ranlib... /usr/bin/ranlib
+checking for strip... /usr/bin/strip
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC
+checking if /usr/bin/gcc PIC flag -fPIC works... yes
+checking if /usr/bin/gcc static flag -static works... no
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by /usr/bin/g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /usr/bin/g++ option to produce PIC... -fPIC
+checking if /usr/bin/g++ PIC flag -fPIC works... yes
+checking if /usr/bin/g++ static flag -static works... no
+checking if /usr/bin/g++ supports -c -o file.o... yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /usr/bin/g++ accepts -g... (cached) yes
+checking dependency style of /usr/bin/g++... (cached) gcc3
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/make sets $(MAKE)... (cached) yes
+checking for main in -lpthread... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for stdint.h... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for memset... yes
+checking for sqrt... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating FlexImageLib/Makefile
+config.status: creating TrackingBenchmark/Makefile
+config.status: creating TrackingBenchmark/threads/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+[PARSEC] Running 'env CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions /usr/bin/make':
+cd /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src && /bin/bash /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/missing --run aclocal-1.9 
+ cd /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src && /bin/bash /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/missing --run automake-1.9 --gnu 
+cd /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src && /bin/bash /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/missing --run autoconf
+/bin/bash ./config.status --recheck
+running CONFIG_SHELL=/bin/bash /bin/bash /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/src/configure  --enable-threads --disable-openmp --disable-tbb --prefix=/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/apps/bodytrack/inst/amd64-linux.gcc CC=/usr/bin/gcc CFLAGS= -O3 -g -funroll-loops -fprefetch-loop-arrays -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 LDFLAGS=-L/usr/lib64 -L/usr/lib CPPFLAGS= CPP=/usr/bin/cpp CXX=/usr/bin/g++ CXXFLAGS=-O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -fsanitize=address -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -fexceptions CXXCPP=  --no-create --no-recursion
+checking for a BSD-compatible install... /home/alberto/Documentos/TFG/PARSEC_SANITIZED/bin/install -c
+checking whether build environment is sane... 

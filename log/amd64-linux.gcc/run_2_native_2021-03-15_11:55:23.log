@@ -1,0 +1,24 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on lun 15 mar 2021 11:55:23 CET.
+[PARSEC] Benchmarks to run:  parsec.fluidanimate
+
+[PARSEC] [========== Running benchmark parsec.fluidanimate [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+in_500K.fluid
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/fluidanimate/inst/amd64-linux.gcc/bin/fluidanimate 2 500 in_500K.fluid out.fluid':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+Loading file "in_500K.fluid"...
+Number of cells: 229900
+Grids steps over x, y, z: 0.00236364 0.00236842 0.00236364
+Number of particles: 501642
+Saving file "out.fluid"...
+
+real	1m23,382s
+user	2m44,778s
+sys	0m0,116s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

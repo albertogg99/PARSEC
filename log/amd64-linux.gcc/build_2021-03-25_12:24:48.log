@@ -1,0 +1,9 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 BUILD LOGFILE ==========]
+
+[PARSEC] Build amd64-linux.gcc started on jue 25 mar 2021 12:24:48 CET.
+[PARSEC] Packages to build:  parsec.raytrace
+
+[PARSEC] [========== Building package parsec.raytrace [1] ==========]
+[PARSEC] [---------- Analyzing package parsec.raytrace ----------]
+[PARSEC] Package parsec.raytrace already exists, proceeding.
+[PARSEC] Done.

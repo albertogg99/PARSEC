@@ -1,0 +1,79 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on vie 02 abr 2021 10:53:39 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 1 native':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 128 1000000 200000 1 &
+/home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 10 20 128 1000000 200000 5000 none output.txt 1
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[Server] 1 clients are connected
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+=================================================================
+==8638==ERROR: AddressSanitizer: heap-use-after-free on address 0x7f1096c3a808 at pc 0x562688411ce6 bp 0x7f108c22dd30 sp 0x7f108c22dd20
+READ of size 8 at 0x7f1096c3a808 thread T5
+    #0 0x562688411ce5 in receive_from_client(void*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:1917
+    #1 0x7f10a0eea608 in start_thread /build/glibc-eX1tMB/glibc-2.31/nptl/pthread_create.c:477
+    #2 0x7f10a0ae1292 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x122292)
+
+0x7f1096c3a808 is located 95997960 bytes inside of 102400000-byte region [0x7f10910ad800,0x7f1097255800)
+freed by thread T0 here:
+    #0 0x7f10a0fb41b7 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.6+0xb01b7)
+    #1 0x56268841d8a9 in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2156
+
+previously allocated by thread T0 here:
+    #0 0x7f10a0fb4517 in malloc (/lib/x86_64-linux-gnu/libasan.so.6+0xb0517)
+    #1 0x56268841d30b in streamCluster(PStream*, long, long, int, long, long, char*) /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:2130
+
+Thread T5 created by T0 here:
+    #0 0x7f10a0f5ba95 in __interceptor_pthread_create (/lib/x86_64-linux-gnu/libasan.so.6+0x57a95)
+    #1 0x562688420971 in pthread_create_wrapper /home/alberto/Documentos/TFG/PARSEC/pkgs/libs/uptcpip/obj/amd64-linux.gcc/host.support/host_serv.c:181
+    #2 0x756e672d78756e68  (<unknown module>)
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/alberto/Documentos/TFG/PARSEC/pkgs/netapps/netstreamcluster/obj/amd64-linux.gcc/server/streamcluster.cpp:1917 in receive_from_client(void*)
+Shadow bytes around the buggy address:
+  0x0fe292d7f4b0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f4c0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f4d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f4e0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f4f0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x0fe292d7f500: fd[fd]fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f510: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f520: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f530: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f540: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0fe292d7f550: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==8638==ABORTING
+
+real	0m0,188s
+user	0m0,023s
+sys	0m0,053s

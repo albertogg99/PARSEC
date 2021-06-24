@@ -1,0 +1,51 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on jue 01 abr 2021 12:09:50 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+transaction number is 250000
+829
+the data preparation cost 0.845530 seconds, the FPgrowth cost 0.161521 seconds
+
+=================================================================
+==42085==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 177200000 byte(s) in 443 object(s) allocated from:
+    #0 0x7f0734d8b087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x556dfa58cc4d in MapFileNode::init(int, int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:130
+    #2 0x556dfa58cc4d in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:66
+
+Direct leak of 1600000 byte(s) in 4 object(s) allocated from:
+    #0 0x7f0734d8b087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x556dfa58cb10 in MapFileNode::init(int, int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:130
+    #2 0x556dfa58cb10 in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:106
+
+Direct leak of 400000 byte(s) in 1 object(s) allocated from:
+    #0 0x7f0734d8b087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x556dfa58b9b5 in MapFileNode::init(int, int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:130
+    #2 0x556dfa58b9b5 in Data::parseDataFile(MapFile*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/data.cpp:34
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0x7f0734d8af17 in operator new(unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb1f17)
+    #1 0x556dfa597589 in FP_tree::scan1_DB(Data*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:855
+
+Indirect leak of 3316 byte(s) in 1 object(s) allocated from:
+    #0 0x7f0734d8b087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x556dfa5975ee in stack::stack(int) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:485
+    #2 0x556dfa5975ee in FP_tree::scan1_DB(Data*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:855
+
+SUMMARY: AddressSanitizer: 179203340 byte(s) leaked in 450 allocation(s).
+
+real	0m1,118s
+user	0m0,805s
+sys	0m0,312s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

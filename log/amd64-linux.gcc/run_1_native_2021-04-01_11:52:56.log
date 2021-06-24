@@ -1,0 +1,36 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on jue 01 abr 2021 11:52:56 CEST.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+webdocs_250k.dat
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine webdocs_250k.dat 11000':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+=================================================================
+==20157==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x6020000000f0
+    #0 0x7faf1311ef7f in operator delete(void*, unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2f7f)
+    #1 0x56418502efbd in void first_transform_FPTree_into_FPArray<unsigned short>(FP_tree*, unsigned short) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:289
+    #2 0x564185022e79 in FP_tree::FP_growth_first(FSout*) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:1310
+    #3 0x564185011b6d in main /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fpmax.cpp:183
+    #4 0x7faf12c7e0b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #5 0x56418501238d in _start (/home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/inst/amd64-linux.gcc/bin/freqmine+0x538d)
+
+0x6020000000f0 is located 0 bytes inside of 16-byte region [0x6020000000f0,0x602000000100)
+allocated by thread T0 here:
+    #0 0x7faf1311e087 in operator new[](unsigned long) (/lib/x86_64-linux-gnu/libasan.so.6+0xb2087)
+    #1 0x56418502e72a in void first_transform_FPTree_into_FPArray<unsigned short>(FP_tree*, unsigned short) /home/alberto/Documentos/TFG/PARSEC/pkgs/apps/freqmine/obj/amd64-linux.gcc/fp_tree.cpp:194
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/lib/x86_64-linux-gnu/libasan.so.6+0xb2f7f) in operator delete(void*, unsigned long)
+==20157==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==20157==ABORTING
+
+real	0m1,043s
+user	0m0,708s
+sys	0m0,332s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

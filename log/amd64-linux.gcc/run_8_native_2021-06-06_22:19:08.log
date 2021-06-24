@@ -1,0 +1,66 @@
+[PARSEC] [========== PARSEC 3.0-beta-20150206 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc binaries and input native started on dom 06 jun 2021 22:19:08 CEST.
+[PARSEC] Benchmarks to run:  parsec.netstreamcluster
+
+[PARSEC] [========== Running benchmark parsec.netstreamcluster [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/run.sh 8 native':
+[PARSEC] [---------- Beginning of output ----------]
+Running
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/client 128 1000000 200000 1 &
+/home/alberto/Documentos/TFG/PARSEC_SANITIZED/pkgs/netapps/netstreamcluster/inst/amd64-linux.gcc/bin/server 10 20 128 1000000 200000 5000 none output.txt 8
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[Server] 1 clients are connected
+
+============================================================
+  Enter PARSEC TCPIP ROI 
+============================================================
+read 200000 points
+[Client:0]: Sending ...
+[Client:0] send bytes = 102400000
+[Client:0] send bytes = 102400000
+[Client:0] send bytes = 102400000
+[Client:0] send bytes = 102400000
+[Client:0] send bytes = 102400000
+[Client:0] Send data to server ok!
+Receive Ack from Server
+[0] Data size = 102400000B, time =  0.275081s, BW =  372.254MB/s
+[0] Data size = 102400000B, time =  0.464232s, BW =  220.579MB/s
+[0] Data size = 102400000B, time =  0.396356s, BW =  258.354MB/s
+[0] Data size = 102400000B, time =  0.325507s, BW =  314.586MB/s
+[0] Data size = 102400000B, time =  0.229471s, BW =  446.244MB/s
+Send Ack
+
+------------------------------------------------------------
+      Execution Statistics of u-TCP/IP Stack 
+------------------------------------------------------------
+There are 6 threads, 5 involved to u-TCP/IP stack
+(u-TCP/IP_Threads) / (Total_Threads) = 83.33%
+
+ROI_RUN_TIME =   1.70s
+
+     THREAD_TYPE         ACTIVE_TIME           ACTIVE(%)
+        Rx_Tcpip              0.754s               44.44
+         Tx_Link              0.064s                3.79
+         Rx_Link              0.091s                5.37
+           Timer              0.004s                0.27
+          Socket              0.443s               26.11
+------------------------------------------------------------
+
+============================================================
+  Exit PARSEC TCPIP ROI 
+============================================================
+
+read 200000 points
+read 200000 points
+read 200000 points
+read 200000 points
+
+real	0m52,298s
+user	6m42,205s
+sys	0m1,612s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.
