@@ -50,6 +50,6 @@ $ parsecmgmt -a run
 
 ## Personas que han contribuido
 
-Alberto García García
+Alberto García García - [Contacto](https://www.linkedin.com/in/alberto-garc%C3%ADa-garc%C3%ADa/)
 
-José Daniel García Sánchez (tutor)
+José Daniel García Sánchez (tutor) - [Contacto](https://es.linkedin.com/in/jdanielgarcia) 
