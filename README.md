@@ -1,5 +1,5 @@
 # PARSEC
-Este repositorio incluye 8 de las aplicaciones del *benchmark* PARSEC original, las cuales han sido modernizadas durante mi Trabajo Fin de Grado: ***Estudio de la calidad de software en benchmarks científicos***. Para descargar la versión original visita https://parsec.cs.princeton.edu/
+Este repositorio incluye 8 de las aplicaciones del *benchmark* PARSEC original, las cuales han sido modernizadas durante mi Trabajo Fin de Grado: ***Estudio de calidad de software en benchmarks científicos***. Para descargar la versión original visita https://parsec.cs.princeton.edu/
 
 ## Aplicaciones modernizadas
 - Blackscholes
