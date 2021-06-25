@@ -19,7 +19,7 @@ Todas estas aplicaciones compilan sin avisos ni errores con GCC versión 10.2 y 
 
 ## Instalación y ejecución
 
-A continuación se explica brevemente cómo instalar y ejecutar las aplicaciones del *benchmark* PARSEC. Para una información más detallada visita https://parsec.cs.princeton.edu/parsec3-doc.htm
+A continuación se explica brevemente cómo instalar y ejecutar las aplicaciones del *benchmark* PARSEC. Para una información más detallada visita https://parsec.cs.princeton.edu/parsec3-doc.htm.
 
 #### Cómo instalar  y ejecutar el *benchmark*
 **1.**  Descarga el zip con los archivos.
