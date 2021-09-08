@@ -1,7 +1,7 @@
 # PARSEC
 Este repositorio incluye 8 de las aplicaciones del *benchmark* PARSEC original, las cuales han sido modernizadas durante mi Trabajo Fin de Grado: ***Estudio de calidad de software en benchmarks científicos***. Para descargar la versión original visita https://parsec.cs.princeton.edu/.
 
-La motivación detrás de este proyecto era comprobar el impacto de la calidad del código en el rendimiento de las aplicaciones. El archivo *memoria.pdf* contiene los resultados del estudio.
+La motivación detrás de este proyecto era comprobar el impacto de la calidad del código en el rendimiento de las aplicaciones. Puedes consultar los resultados del estudio en esta [memoria](memoria.pdf).
 
 ## Aplicaciones modernizadas
 - Blackscholes
